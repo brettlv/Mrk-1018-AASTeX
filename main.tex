@@ -1,0 +1,582 @@
+
+%% Beginning of file 'sample63.tex'
+%%
+%% Modified 2019 June
+%%
+%% This is a sample manuscript marked up using the
+%% AASTeX v6.3 LaTeX 2e macros.
+%%
+%% AASTeX is now based on Alexey Vikhlinin's emulateapj.cls 
+%% (Copyright 2000-2015).  See the classfile for details.
+
+%% AASTeX requires revtex4-1.cls (http://publish.aps.org/revtex4/) and
+%% other external packages (latexsym, graphicx, amssymb, longtable, and epsf).
+%% All of these external packages should already be present in the modern TeX 
+%% distributions.  If not they can also be obtained at www.ctan.org.
+
+%% The first piece of markup in an AASTeX v6.x document is the \documentclass
+%% command. LaTeX will ignore any data that comes before this command. The 
+%% documentclass can take an optional argument to modify the output style.
+%% The command below calls the preprint style which will produce a tightly 
+%% typeset, one-column, single-spaced document.  It is the default and thus
+%% does not need to be explicitly stated.
+%%
+%%
+%% using aastex version 6.3
+\documentclass{aastex63}
+
+%% The default is a single spaced, 10 point font, single spaced article.
+%% There are 5 other style options available via an optional argument. They
+%% can be invoked like this:
+%%
+%% \documentclass[arguments]{aastex63}
+%% 
+%% where the layout options are:
+%%
+%%  twocolumn   : two text columns, 10 point font, single spaced article.
+%%                This is the most compact and represent the final published
+%%                derived PDF copy of the accepted manuscript from the publisher
+%%  manuscript  : one text column, 12 point font, double spaced article.
+%%  preprint    : one text column, 12 point font, single spaced article.  
+%%  preprint2   : two text columns, 12 point font, single spaced article.
+%%  modern      : a stylish, single text column, 12 point font, article with
+%% 		  wider left and right margins. This uses the Daniel
+%% 		  Foreman-Mackey and David Hogg design.
+%%  RNAAS       : Preferred style for Research Notes which are by design 
+%%                lacking an abstract and brief. DO NOT use \begin{abstract}
+%%                and \end{abstract} with this style.
+%%
+%% Note that you can submit to the AAS Journals in any of these 6 styles.
+%%
+%% There are other optional arguments one can invoke to allow other stylistic
+%% actions. The available options are:
+%%
+%%   astrosymb    : Loads Astrosymb font and define \astrocommands. 
+%%   tighten      : Makes baselineskip slightly smaller, only works with 
+%%                  the twocolumn substyle.
+%%   times        : uses times font instead of the default
+%%   linenumbers  : turn on lineno package.
+%%   trackchanges : required to see the revision mark up and print its output
+%%   longauthor   : Do not use the more compressed footnote style (default) for 
+%%                  the author/collaboration/affiliations. Instead print all
+%%                  affiliation information after each name. Creates a much 
+%%                  longer author list but may be desirable for short 
+%%                  author papers.
+%% twocolappendix : make 2 column appendix.
+%%   anonymous    : Do not show the authors, affiliations and acknowledgments 
+%%                  for dual anonymous review.
+%%
+%% these can be used in any combination, e.g.
+%%
+%% \documentclass[twocolumn,linenumbers,trackchanges]{aastex63}
+%%
+%% AASTeX v6.* now includes \hyperref support. While we have built in specific
+%% defaults into the classfile you can manually override them with the
+%% \hypersetup command. For example,
+%%
+%% \hypersetup{linkcolor=red,citecolor=green,filecolor=cyan,urlcolor=magenta}
+%%
+%% will change the color of the internal links to red, the links to the
+%% bibliography to green, the file links to cyan, and the external links to
+%% magenta. Additional information on \hyperref options can be found here:
+%% https://www.tug.org/applications/hyperref/manual.html#x1-40003
+%%
+%% Note that in v6.3 "bookmarks" has been changed to "true" in hyperref
+%% to improve the accessibility of the compiled pdf file.
+%%
+%% If you want to create your own macros, you can do so
+%% using \newcommand. Your macros should appear before
+%% the \begin{document} command.
+%%
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand\aastex{AAS\TeX}
+\newcommand\latex{La\TeX}
+
+
+
+\usepackage{color}
+
+\usepackage{times}
+\newcommand{\sqcm}{cm$^{-2}$}
+\newcommand{\fek}{Fe~K$\alpha$}
+\newcommand{\xmm}{{\em XMM-Newton}}
+\newcommand{\nustar}{{\em NuSTAR}}
+\newcommand{\chandra}{{\em Chandra}}
+\newcommand{\swift}{{\em Swift}}
+\newcommand{\suzaku}{{\em Suzaku}}
+\newcommand{\sax}{{\em BeppoSAX}}
+\usepackage[space]{grffile}
+\usepackage[]{amsmath}
+\usepackage{amssymb}
+\usepackage[normalem]{ulem}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{comment}
+\bibpunct{(}{)}{;}{a}{}{,}
+%\usepackage{pdflscape}	% Landscape pages
+\usepackage{amsmath} % or simply amstext
+\newcommand{\angstrom}{\text{\normalfont\AA}}
+
+
+
+
+
+
+
+
+
+
+
+%% Reintroduced the \received and \accepted commands from AASTeX v5.2
+\received{November  X, 2019}
+\revised{November  X, 2019}
+\accepted{\today}
+%% Command to document which AAS Journal the manuscript was submitted to.
+%% Adds "Submitted to " the argument.
+\submitjournal{AJ}
+
+%% For manuscript that include authors in collaborations, AASTeX v6.3
+%% builds on the \collaboration command to allow greater freedom to 
+%% keep the traditional author+affiliation information but only show
+%% subsets. The \collaboration command now must appear AFTER the group
+%% of authors in the collaboration and it takes TWO arguments. The last
+%% is still the collaboration identifier. The text given in this
+%% argument is what will be shown in the manuscript. The first argument
+%% is the number of author above the \collaboration command to show with
+%% the collaboration text. If there are authors that are not part of any
+%% collaboration the \nocollaboration command is used. This command takes
+%% one argument which is also the number of authors above to show. A
+%% dashed line is shown to indicate no collaboration. This example manuscript
+%% shows how these commands work to display specific set of authors 
+%% on the front page.
+%%
+%% For manuscript without any need to use \collaboration the 
+%% \AuthorCollaborationLimit command from v6.2 can still be used to 
+%% show a subset of authors.
+%
+%\AuthorCollaborationLimit=2
+%
+%% will only show Schwarz & Muench on the front page of the manuscript
+%% (assuming the \collaboration and \nocollaboration commands are
+%% commented out).
+%%
+%% Note that all of the author will be shown in the published article.
+%% This feature is meant to be used prior to acceptance to make the
+%% front end of a long author article more manageable. Please do not use
+%% this functionality for manuscripts with less than 20 authors. Conversely,
+%% please do use this when the number of authors exceeds 40.
+%%
+%% Use \allauthors at the manuscript end to show the full author list.
+%% This command should only be used with \AuthorCollaborationLimit is used.
+
+%% The following command can be used to set the latex table counters.  It
+%% is needed in this document because it uses a mix of latex tabular and
+%% AASTeX deluxetables.  In general it should not be needed.
+%\setcounter{table}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% The following section outlines numerous optional output that
+%% can be displayed in the front matter or as running meta-data.
+%%
+%% If you wish, you may supply running head information, although
+%% this information may be modified by the editorial offices.
+\shorttitle{Mrk 1018}
+\shortauthors{Bing Lyu et al.}
+%%
+%% You can add a light gray and diagonal water-mark to the first page 
+%% with this command:
+%% \watermark{text}
+%% where "text", e.g. DRAFT, is the text to appear.  If the text is 
+%% long you can control the water-mark size with:
+%% \setwatermarkfontsize{dimension}
+%% where dimension is any recognized LaTeX dimension, e.g. pt, in, etc.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{./}{figures/}}
+%% This is the end of the preamble.  Indicate the beginning of the
+%% manuscript itself with \begin{document}.
+
+\begin{document}
+
+\title{Long term multi-wavelength evolution of Changing-Look AGN: Mrk~1018}
+
+%% LaTeX will automatically break titles if they run longer than
+%% one line. However, you may use \\ to force a line break if
+%% you desire. In v6.3 you can include a footnote in the title.
+
+%% A significant change from earlier AASTEX versions is in the structure for 
+%% calling author and affiliations. The change was necessary to implement 
+%% auto-indexing of affiliations which prior was a manual process that could 
+%% easily be tedious in large author manuscripts.
+%%
+%% The \author command is the same as before except it now takes an optional
+%% argument which is the 16 digit ORCID. The syntax is:
+%% \author[xxxx-xxxx-xxxx-xxxx]{Author Name}
+%%
+%% This will hyperlink the author name to the author's ORCID page. Note that
+%% during compilation, LaTeX will do some limited checking of the format of
+%% the ID to make sure it is valid. If the "orcid-ID.png" image file is 
+%% present or in the LaTeX pathway, the OrcID icon will appear next to
+%% the authors name.
+%%
+%% Use \affiliation for affiliation information. The old \affil is now aliased
+%% to \affiliation. AASTeX v6.3 will automatically index these in the header.
+%% When a duplicate is found its index will be the same as its previous entry.
+%%
+%% Note that \altaffilmark and \altaffiltext have been removed and thus 
+%% can not be used to document secondary affiliations. If they are used latex
+%% will issue a specific error message and quit. Please use multiple 
+%% \affiliation calls for to document more than one affiliation.
+%%
+%% The new \altaffiliation can be used to indicate some secondary information
+%% such as fellowships. This command produces a non-numeric footnote that is
+%% set away from the numeric \affiliation footnotes.  NOTE that if an
+%% \altaffiliation command is used it must come BEFORE the \affiliation call,
+%% right after the \author command, in order to place the footnotes in
+%% the proper location.
+%%
+%% Use \email to set provide email addresses. Each \email will appear on its
+%% own line so you can put multiple email address in one \email call. A new
+%% \correspondingauthor command is available in V6.3 to identify the
+%% corresponding author of the manuscript. It is the author's responsibility
+%% to make sure this name is also in the author list.
+%%
+%% While authors can be grouped inside the same \author and \affiliation
+%% commands it is better to have a single author for each. This allows for
+%% one to exploit all the new benefits and should make book-keeping easier.
+%%
+%% If done correctly the peer review system will be able to
+%% automatically put the author and affiliation information from the manuscript
+%% and save the corresponding author the trouble of entering it by hand.
+
+\correspondingauthor{Qingwen Wu}
+\email{qwwu@hust.edu.cn}
+
+
+\author[0000-0001-8879-368X]{Bing Lyu}
+\affiliation{Huazhong University of Science and Technology \\
+School of Physics, 1037 Luoyu Road \\
+Wuhan, 430074, China \\}
+\affil{Shanghai Astronomical Observatory\\
+CAS, Nandan Road 80 \\
+Shanghai, 200030, China}
+%\nocollaboration
+
+
+\author{Zhen Yan}
+\affil{Shanghai Astronomical Observatory\\
+CAS, Nandan Road 80 \\
+Shanghai, 200030, China}
+
+
+
+\author{Wenfei Yu}
+\affiliation{Shanghai Astronomical Observatory\\
+CAS, Nandan Road 80 \\
+Shanghai, 200030, China}
+%\collaboration{(AAS Journals Data Scientists collaboration)}
+
+\author{Qingwen Wu}
+\affiliation{Huazhong University of Science and Technology \\
+School of Physics, 1037 Luoyu Road \\
+Wuhan, 430074, China \\}
+%\nocollaboration
+
+
+
+%% Note that the \and command from previous versions of AASTeX is now
+%% depreciated in this version as it is no longer necessary. AASTeX 
+%% automatically takes care of all commas and "and"s between authors names.
+
+%% AASTeX 6.3 has the new \collaboration and \nocollaboration commands to
+%% provide the collaboration status of a group of authors. These commands 
+%% can be used either before or after the list of corresponding authors. The
+%% argument for \collaboration is the collaboration identifier. Authors are
+%% encouraged to surround collaboration identifiers with ()s. The 
+%% \nocollaboration command takes no argument and exists to indicate that
+%% the nearby authors are not part of surrounding collaborations.
+
+%% Mark off the abstract in the ``abstract'' environment. 
+\begin{abstract}
+We present the multi-wavelength and long-term evolution of Changing-look AGN, Mrk~1018, especially during its fading phase, which shows rapid variability in X-ray and optical band.
+\end{abstract}
+%% Keywords should appear after the \end{abstract} command. 
+%% See the online documentation for the full list of available subject
+%% keywords and the rules for their use.
+\keywords{AGN: Changing-look -- AGN: individual (Mrk~1018)}
+
+
+
+%% From the front matter, we move on to the body of the paper.
+%% Sections are demarcated by \section and \subsection, respectively.
+%% Observe the use of the LaTeX \label
+%% command after the \subsection to give a symbolic KEY to the
+%% subsection for cross-referencing in a \ref command.
+%% You can use LaTeX's \ref and \label commands to keep track of
+%% cross-references to sections, equations, tables, and figures.
+%% That way, if you change the order of any elements, LaTeX will
+%% automatically renumber them.
+%%
+%% We recommend that authors also use the natbib \citep
+%% and \citet commands to identify citations.  The citations are
+%% tied to the reference list via symbolic KEYs. The KEY corresponds
+%% to the KEY in the \bibitem in the reference list below. 
+
+\section{Introduction} \label{sec:intro}
+
+Unified active galactic nucleus(AGN) scheme can be described as a phenomenon that different AGN types are determined by the effect of different inclination to line of sight, see \citet{1993ARA&A..31..473A}. Under this scheme, Seyferts were first classified as Type I or II, depending on the emission lines shown by their spectra. Type I(S1) AGNs, show broad lines, allowed lines and narrower forbidden lines, could be face-on to observer, while type II(S2) AGNs show only both permitted and forbidden narrow lines, which could be edge-on and blocked by surrounding torus. Subclasses(e.g. Seyfert 1.5, 1.8 and 1.9) were introduced by \citet{1976MNRAS.176P..61O,1981ApJ...249..462O} based on the relative weaker ratio of broad-line components to the narrow-line component. For type 1.9, only $H\alpha$ line shows in the broad-line components. 
+
+
+Mrk~1018 at z=0.042436 is known to be a changing-look AGN, which underwent a full cycle with twice type transition.
+\citet{1986ApJ...311..135C} reported that the spectrum type of Mrk~1018 transited from S1.9 to S1 between 1979 and 1984. \citet{2016A&A...593L...8M} reported that Mrk~1018 returned to S1.9 between 2013 and 2015 after 30 years as a S1 \citep[see also][]{2017A&A...607L...9K}. A tidal eruption event could not account for the Mrk 1018's change. As reported in \citet{2016A&A...593L...9H}, the optical continuum brightness and X-ray flux dropped by a factor of $\sim$ 17 and $\sim 8$, respectively, in 2010$\sim$2016. An explanation of obscuration event was ruled out. Since no intrinsic absorption in the X-ray spectrum was detected, it came to the conclusion that change of type was consistent with declining accretion rate. \citet{2017A&A...607L...9K} reported the outburst of Mrk~1018 in October 2016 with the brightening by a factor of 1.9 at least to February 2017. Far-UV continuum flux also increased by a factor of 1.5 in around one year during the outburst. We notice that Mrk 1018 also experienced the re-brightening during the types transition period simultaneously in X-ray and UVOT band by a factor of $\sim3$ and $\sim1.3$, respectively, between 2013 Mar and 2013 Jun.  
+
+This paper is structured as follows: In Sect. \ref{sec:data}, we describe the observations and data reduction. In Sect. ~\ref{sec:result}, we present multi-wavelength observation result. In last Sect. ~\ref{sec:discussion}, we discuss possible explanations for the Changing-look AGN, Mrk~1018. Hereafter, we adopt $H_0$=70 km $s^{-1} Mpc^{-1}$, $\Omega_{m}$=0.3, and $\Omega_{\Lambda}=0.7 $ as cosmological parameters, and the latest Black Hole(BH) mass measurement $\log(M_{BH}/M_{\odot})=7.84$\citep{2017MNRAS.472.3492E,2018MNRAS.480.3898N}. 
+\clearpage
+
+
+\section{Data Analysis}\label{sec:data}
+\subsection{X-ray}
+We analysed archival \swift, \xmm, \chandra~and \nustar~data in 2005 $\sim$ 2018. All 2-10~keV fluxes are corrected for Galactic absorption with cflux model in Xspec v12.10.1f \citep{1996ASPC..101...17A}, where its absorption by Galactic neutral hydrogen, nH, was fixed at 0.0243 $\times10^{22} cm^{-2}$\citep[see ][]{2016A&A...593L...9H}. The 2-10~keV flux variability reach a factor around 8-10 between 2009 and 2016, which could be caused by the dimming of the central engine. The severe variability in short timescale provides a good target for intrinsic activity of individual Super-massive Black Holes(SMBH).
+%\textit{XMM-Newton}
+
+\subsubsection{\swift/XRT}
+The X-Ray Telescope (XRT) on board the Swift satellite has the most frequent long term X-ray observation of Mrk~1018, a rapidly variable Changing-look AGN. We reanalysis the archive data with analysis xrtpipeline\footnote{\url{http://swift.asdc.asi.it}} and fit the spectrum of Mrk~1018 in 0.5-10~keV range based on a simple absorbed power-law model for all data.  The source region is a 47-arcsec-radius circle at the center of AGN as suggested in \citet{2009MNRAS.397.1177E}. When counts of photons is less than 100, we use C-stat method to fit the model without grouping counts bins. Otherwise, the spectrum was grouped by minimum of 20 counts per bin. 
+
+
+\subsubsection{\chandra}
+We use ciao 4.10\footnote{\url{http://cxc.harvard.edu/ciao/threads/index.html}} to reanalysis the 6 Chandra observations released in archive data. All data was grouped by minimum of 20 counts per bin and fitted in 0.5-10~keV range by a absorbed power-law plus gaussian component, except for the observation in 2010, for which pile-up effects should be carefully taken into account. The source and background regions selection follow \citet{2017ApJ...840...11L}, which takes care of accounting for the effects of pile-up with a JDPILEUP component and get the  $\Gamma =1.97_{+0.04}^{-0.03}$. It's similar to our result $\Gamma =2.02\pm{0.03}$ when we consider the pile-up effects. The correction for pile-up effects will make the spectrum softer. \citet{2016A&A...593L...9H} excluded the brightest 9 pixels to avoid pile-up effects and get a lower $\Gamma =1.68\pm0.04$ determined from 4-8 keV range spectrum. \citet{2017A&A...607L...9K} ignored the pile-up effects and get a similar $\Gamma =1.7\pm0.03$ fitted in 0.5-8 keV. The fitting range selection will also influence the parameter $\Gamma$. So we adopted values from \citet{2017A&A...607L...9K} for the observation in 2010(MJD 55527).
+
+\subsubsection{\xmm/EPIC-PN}
+Only 2 observation data in 2005 and 2008 with XMM-Newton have been released, and we analysised the data with xmmsas-20170719-1539-16.1.0.\footnote{\url{https://www.cosmos.esa.int/web/xmm-newton}}. The spectrum was grouped by minimum of 30 counts per bin and fitted in the 2-10~keV range based on a absorbed power-law model. 
+
+\subsubsection{\nustar}
+5 observations with Nustar in archive data are analysised with nupipeline version 0.4.6 within heasoft v6.26.\footnote{\url{https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/}}. The source region is a 50-arcsec-radius circle at the center of AGN, and background is extracted from region off source. The spectrum was grouped by minimum of 30 counts per bin and fitted in the 3-79~keV range based on a absorbed power-law model.
+
+
+\subsection{Optical/ultraviolet}
+\subsubsection{\swift/UVOT}
+There are six filters in optical/ultraviolet band of \swift/UVOT: V,B,U,UVW1,UVM2 and UVW2. We use the tool \textit{uvotsource} to do the aperture photometry for all the observations of each filter. The source aperture radius is 5$\arcsec$ and the background is chosen in a blank region with much larger aperture radius. The results of the V and B filters are discarded, because the emission from the host galaxy is dominated in these two bands even in the bright phase \citep{2018MNRAS.480.3898N}. We discard the results of all filters after 2016, since the emission from the nucleus is comparable or less than the host galaxy \citep{2018MNRAS.480.3898N}. 
+
+E(B-V)=0.099-0.075,
+
+$A_V$  is the extinction in the V band
+extinction in magnitudes from \citet{2007ApJ...663..320F}
+
+\subsection{Radio/VLA}\label{subsec:vla}
+%\subsubsection{VLA}
+We search all the historical VLA observations on Mrk~1018 within the field of view. For data reduction of old VLA data(project AU0020, AB0476, AB0540 and AB0878), we manually flagg and calibrate the data, then cleaned the image following the instruction\footnote{\url{https://casaguides.nrao.edu/index.php/VLA_5_GHz_continuum_survey_of_Seyfert_galaxies}}. For all JVLA data(project 16A-444, 16B-084),  we analysised the data with CASA version 5.3.0\citep{2007ASPC..376..127M}. All calibration are performed using scripted EVLA\_pipeline1.4.2\footnote{\url{https://science.nrao.edu/facilities/vla/data-processing/pipeline/scripted-pipeline}}. Different bands are split into different MS files after pipeline calibration and RFI check. Then the source are imaged using TCLEAN method and flux are estimated via IMFIT task. The flux density uncertainties are calculated as $\sigma_{S}=\sqrt{(rms)^2+(0.05\times S)^2}$, where $5\%$ absolute flux error is taken into account. Radio spetrum index $\alpha$ is estimated following $S_v \propto v^{-\alpha}$. Survey results in FIRST\citep{1994ASPC...61..165B,1995ApJ...450..559B} and Stripe 82\citep{2011AJ....142....3H} from archival papers are also listed in Table.~\ref{tab:table2}.
+
+\section{Result}\label{sec:result}
+
+\subsection{$\Gamma-Flux$ in X-ray}\label{subsec:g-f}
+Based on all X-ray spectrum fit, we show the spectrum index evolution with flux and Eddington rate, as shown in Fig.~\ref{fig:xrayappendgood-fandg-tmap}. For XRT observations, we only present data with re-chi<1.5 here. For comparison, we also list all the fitting result from reference papers in Table.~\ref{tab:table1}. For better data visualization, interactive image plotted with Bokeh\footnote{\url{https://bokeh.pydata.org/en/latest/index.html}} can be found online\footnote{\url{https://brettlv.github.io/pythoncode/Mrk1018/Mrk1018-xray-bokeh.html}}.
+
+The $\Gamma$ vs Eddington rate diagram shows distinct evolution relationship when $L_{2-10 keV}/L_{Edd}$ reach the so-called critical Eddington rate around 0.005$\sim$ 0.01. The evolution of spectrum and the dimming of X-ray flux might be caused by the central engine activities as the intrinsic absorption(nH) is consistent with zero. However, we found that it transited in two tracks in short timescale(100-800 days) relative to the typical timescale of Super-massive Black Holes(SMBHs). We emphasise that Mrk1018 increased its flux in X-ray with a factor $\sim2$ from MJD 56352 to 56450, while $\Gamma$ dropped from $\sim1.8$ to $\sim1.4$.  
+
+
+\begin{figure}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.6\columnwidth]{./pic/subplots-xrayappendgood-fandg-second.png}
+    \caption{$\Gamma$ and flux evolution}
+    \label{fig:xrayappendgood-fandg-secondaxis}
+\end{figure}
+
+\begin{figure}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.7\columnwidth]{./pic/xrayappendgood-errorbar-f-g-tmap.png}
+    \caption{$\Gamma$ and flux evolution}
+    \label{fig:xrayappendgood-fandg-tmap}
+\end{figure}
+
+
+\subsection{Correlation between X-ray and ultraviolet}\label{subsec:xray-uvot}
+During the fading phase, the X-ray flux showed strong linear correlation with UVOT data. The spearmanr coefficiency between simultaneous flux of xrt and four uvot band(uvm2,u,uvw1,and uvw2) are 0.89, 0.79, 0.88, 0.87, respectively. The slope  between log($F_{2-10keV}$) and four band log($\lambda F_{\lambda}$) are 1.4, 0.9, 1.4, 1.6, respectively. Both in X-ray and optical band, it showed the brightening from MJD 56352 to 56450, we found an outlier in Fig.~\ref{fig:correlation-uvot-xray} since the flux during this period in x-ray and ultraviolet increased by a factor of $\sim 2$ and $\sim 0.4$, respectively. Then the flux faded by a factor of $\sim 3$ and $\sim 1.5$, respectively, from MJD 56450 to 56817.
+
+
+
+\begin{figure}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.7\columnwidth]{./pic/uvot-xray-date-lc-sim-left.png}
+    \caption{Light curve from UVOT and XRT  between 2006 and 2016}
+    \label{fig:uvot-xray-date-lc-all}
+\end{figure}
+
+\begin{figure}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.6\columnwidth]{./pic/uvot_xrt_correlation-fig.png}
+    \caption{Correlation of light curve from UVOT and XRT  between 2006 and 2016}
+    \label{fig:correlation-uvot-xray}
+\end{figure}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\subsection{$\alpha_{ox}-L $ diagram}\label{subsec:alpha_ox}
+We define $\alpha_{OX} $ as :
+ $$\alpha_{OX}  = - \frac{log(\lambda F_{2600 \angstrom}/\nu F_{2keV})}{log(\nu_{ 2600 \angstrom }/\nu_{2keV})}+1$$ where we adopt the flux of uvw1 band with central wavelength {2600{\AA}}.
+
+\begin{figure}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=\columnwidth]{./pic/Mrk1018_subplots_plus_2individuals_alpha_ox_L_x_Luv_rate.png}
+    \caption{Mrk1018 and changing-look AGNs $\alpha_{ox}-\nu L_{2keV}/L_{Edd}$ and $\alpha_{ox}-L_{uv}/L_{Edd}$}
+    \label{fig:alpha_ox_luv}
+\end{figure}
+
+
+
+\subsection{SED between X-ray and ultraviolet}\label{subsec:xray-uvot-sed}
+\begin{figure}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.7\columnwidth]{./pic/Mrk1018_sed_uvot_xray-4band-multi.png}
+    \caption{SED between X-ray and ultraviolet}
+    \label{fig:xray-uvot-sed}
+\end{figure}
+
+
+
+\subsection{Correlation between X-ray and radio}\label{subsec:xray-radio}
+We adopt data from intervals between X-ray and radio band as short as possible and find that correlation between the radio and X-ray flux is weak with a spearmanr coefficiency: -0.54, since the radio band flux of Mrk~1018 is almost flat relative to X-ray with a slope $\sim -0.1$ when fitting $log(L_{R})\propto log(L_{X-ray})$. 
+
+
+\begin{figure}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.7\columnwidth]{./pic/radio-date-lc.png}
+    \caption{Light curve of Mrk~1018 in radio band from VLA observations. The flux show weak variablitity in limited observations. }
+    \label{fig:radio-lc}
+\end{figure}
+
+
+\begin{figure}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.7\columnwidth]{./pic/Mrk1018_radio_xray_sel1_rate.png}
+    \caption{Quasi-simultaneous $8.4GHzL_{8.4GHz}/L_{Edd}-L_{2-10keV}/L_{Edd}$ relation of Mrk1018}
+    \label{fig:radio-xray-relation}
+\end{figure}
+
+
+
+
+
+
+\section{Discussion}\label{sec:discussion}
+
+\subsection{V-shape evolution}
+
+\subsection{Xray and ultraviolet radiation origination}
+We found a strong correlation between the optical and X-ray fluxes during the fading phase, %which may indicate that the optical emission is produced by re-processing of the X-rays in outer parts of the optically-thick wind coming from the accretion disk. 
+
+
+\subsection{Temperature and accretion rate}
+
+
+
+\acknowledgments
+
+We thank Linhui Wu for disscussion on the VLA data reduction. This work is supported by...
+
+%% To help institutions obtain information on the effectiveness of their 
+%% telescopes the AAS Journals has created a group of keywords for telescope 
+%% facilities.
+%
+%% Following the acknowledgments section, use the following syntax and the
+%% \facility{} or \facilities{} macros to list the keywords of facilities used 
+%% in the research for the paper.  Each keyword is check against the master 
+%% list during copy editing.  Individual instruments can be provided in 
+%% parentheses, after the keyword, but they are not verified.
+
+
+\vspace{5mm}
+\facilities{\chandra, \swift(XRT and UVOT), \xmm, \nustar,
+VLA}
+
+%% Similar to \facility{}, there is the optional \software command to allow 
+%% authors a place to specify which programs were used during the creation of 
+%% the manusscript. Authors should list each code and include either a
+%% citation or url to the code inside ()s when available.
+
+\software{HEASOFT(v6.26),
+          SAS (v16.1.0),
+          CIAO (v4.10), CASA(v5.3.0),
+          Astropy \citep{2013A&A...558A..33A}
+          }
+
+%% Appendix material should be preceded with a single \appendix command.
+%% There should be a \section command for each appendix. Mark appendix
+%% subsections with the same markup you use in the main body of the paper.
+
+%% Each Appendix (indicated with \section) will be lettered A, B, C, etc.
+%% The equation counter will reset when it encounters the \appendix
+%% command and will number appendix equations (A1), (A2), etc. The
+%% Figure and Table counter will not reset.
+
+\appendix
+
+\section{Appendix tables}
+
+\input{table_xray.tex}
+\input{table_radio.tex}
+\input{table_radio_xray.tex}
+
+
+%% For this sample we use BibTeX plus aasjournals.bst to generate the
+%% the bibliography. The sample63.bib file was populated from ADS. To
+%% get the citations to show in the compiled file do the following:
+%%
+%% pdflatex sample63.tex
+%% bibtext sample63
+%% pdflatex sample63.tex
+%% pdflatex sample63.tex
+
+%\bibliographystyle{mnras}
+\bibliography{refMrk1018} % if your bibtex file is called example.bib
+\bibliographystyle{aasjournal}
+
+%% This command is needed to show the entire author+affiliation list when
+%% the collaboration and author truncation commands are used.  It has to
+%% go at the end of the manuscript.
+%\allauthors
+
+%% Include this line if you are using the \added, \replaced, \deleted
+%% commands to see a summary list of all changes at the end of the article.
+%\listofchanges
+
+\end{document}
+
+% End of file `sample63.tex'.
