@@ -26,8 +26,8 @@
 \documentclass{aastex63}
 
 %% The default is a single spaced, 10 point font, single spaced article.
-%% There are 5 other style options available via an optional argument. They
-%% can be invoked like this:
+%% There are five other style options available via an optional argument. 
+%% They can be invoked like this:
 %%
 %% \documentclass[arguments]{aastex63}
 %% 
@@ -98,6 +98,9 @@
 
 \usepackage{times}
 \newcommand{\sqcm}{cm$^{-2}$}
+\newcommand{\alphaox}{$\alpha_{OX}$}
+\newcommand{\Gammaxray}{$\Gamma$}
+
 \newcommand{\fek}{Fe~K$\alpha$}
 \newcommand{\xmm}{{\em XMM-Newton}}
 \newcommand{\nustar}{{\em NuSTAR}}
@@ -110,14 +113,15 @@
 \usepackage{amssymb}
 \usepackage[normalem]{ulem}
 \usepackage{natbib}
-\usepackage{hyperref}
+%\usepackage{hyperref}
 \usepackage{comment}
 \bibpunct{(}{)}{;}{a}{}{,}
 %\usepackage{pdflscape}	% Landscape pages
 \usepackage{amsmath} % or simply amstext
 \newcommand{\angstrom}{\text{\normalfont\AA}}
-
-
+\usepackage{url}
+\texorpdfstring
+%\usepackage{showframe}
 
 
 
@@ -133,7 +137,7 @@
 \accepted{\today}
 %% Command to document which AAS Journal the manuscript was submitted to.
 %% Adds "Submitted to " the argument.
-\submitjournal{AJ}
+\submitjournal{APJ}
 
 %% For manuscript that include authors in collaborations, AASTeX v6.3
 %% builds on the \collaboration command to allow greater freedom to 
@@ -323,13 +327,10 @@ We present the multi-wavelength and long-term evolution of Changing-look AGN, Mr
 %% tied to the reference list via symbolic KEYs. The KEY corresponds
 %% to the KEY in the \bibitem in the reference list below. 
 
-\section{Introduction} \label{sec:intro}
-
+\section{Introduction}\label{sec:intro} 
 Unified active galactic nucleus(AGN) scheme can be described as a phenomenon that different AGN types are determined by the effect of different inclination to line of sight, see \citet{1993ARA&A..31..473A}. Under this scheme, Seyferts were first classified as Type I or II, depending on the emission lines shown by their spectra. Type I(S1) AGNs, show broad lines, allowed lines and narrower forbidden lines, could be face-on to observer, while type II(S2) AGNs show only both permitted and forbidden narrow lines, which could be edge-on and blocked by surrounding torus. Subclasses(e.g. Seyfert 1.5, 1.8 and 1.9) were introduced by \citet{1976MNRAS.176P..61O,1981ApJ...249..462O} based on the relative weaker ratio of broad-line components to the narrow-line component. For type 1.9, only $H\alpha$ line shows in the broad-line components. 
 
-
-Mrk~1018 at z=0.042436 is known to be a changing-look AGN, which underwent a full cycle with twice type transition.
-\citet{1986ApJ...311..135C} reported that the spectrum type of Mrk~1018 transited from S1.9 to S1 between 1979 and 1984. \citet{2016A&A...593L...8M} reported that Mrk~1018 returned to S1.9 between 2013 and 2015 after 30 years as a S1 \citep[see also][]{2017A&A...607L...9K}. A tidal eruption event could not account for the Mrk 1018's change. As reported in \citet{2016A&A...593L...9H}, the optical continuum brightness and X-ray flux dropped by a factor of $\sim$ 17 and $\sim 8$, respectively, in 2010$\sim$2016. An explanation of obscuration event was ruled out. Since no intrinsic absorption in the X-ray spectrum was detected, it came to the conclusion that change of type was consistent with declining accretion rate. \citet{2017A&A...607L...9K} reported the outburst of Mrk~1018 in October 2016 with the brightening by a factor of 1.9 at least to February 2017. Far-UV continuum flux also increased by a factor of 1.5 in around one year during the outburst. We notice that Mrk 1018 also experienced the re-brightening during the types transition period simultaneously in X-ray and UVOT band by a factor of $\sim3$ and $\sim1.3$, respectively, between 2013 Mar and 2013 Jun.  
+Mrk~1018 at z=0.042436 is known to be a changing-look AGN, which underwent a full cycle with twice type transition. \citet{1986ApJ...311..135C} reported that the spectrum type of Mrk~1018 transited from S1.9 to S1 between 1979 and 1984. \citet{2016A&A...593L...8M} reported that Mrk~1018 returned to S1.9 between 2013 and 2015 after 30 years as a S1 \citep[see also][]{2017A&A...607L...9K}. A tidal eruption event could not account for the Mrk 1018's change. As reported in \citet{2016A&A...593L...9H}, the optical continuum brightness and X-ray flux dropped by a factor of $\sim$ 17 and $\sim 8$, respectively, in 2010$\sim$2016. An explanation of obscuration event was ruled out. Since no intrinsic absorption in the X-ray spectrum was detected, it came to the conclusion that change of type was consistent with declining accretion rate. \citet{2017A&A...607L...9K} reported the outburst of Mrk~1018 in October 2016 with the brightening by a factor of 1.9 at least to February 2017. Far-UV continuum flux also increased by a factor of 1.5 in around one year during the outburst. We notice that Mrk 1018 also experienced the re-brightening during the types transition period simultaneously in X-ray and UVOT band by a factor of $\sim3$ and $\sim1.3$, respectively, between 2013 Mar and 2013 Jun.  
 
 This paper is structured as follows: In Sect. \ref{sec:data}, we describe the observations and data reduction. In Sect. ~\ref{sec:result}, we present multi-wavelength observation result. In last Sect. ~\ref{sec:discussion}, we discuss possible explanations for the Changing-look AGN, Mrk~1018. Hereafter, we adopt $H_0$=70 km $s^{-1} Mpc^{-1}$, $\Omega_{m}$=0.3, and $\Omega_{\Lambda}=0.7 $ as cosmological parameters, and the latest Black Hole(BH) mass measurement $\log(M_{BH}/M_{\odot})=7.84$\citep{2017MNRAS.472.3492E,2018MNRAS.480.3898N}. 
 \clearpage
@@ -337,7 +338,7 @@ This paper is structured as follows: In Sect. \ref{sec:data}, we describe the ob
 
 \section{Data Analysis}\label{sec:data}
 \subsection{X-ray}
-We analysed archival \swift, \xmm, \chandra~and \nustar~data in 2005 $\sim$ 2018. All 2-10~keV fluxes are corrected for Galactic absorption with cflux model in Xspec v12.10.1f \citep{1996ASPC..101...17A}, where its absorption by Galactic neutral hydrogen, nH, was fixed at 0.0243 $\times10^{22} cm^{-2}$\citep[see ][]{2016A&A...593L...9H}. The 2-10~keV flux variability reach a factor around 8-10 between 2009 and 2016, which could be caused by the dimming of the central engine. The severe variability in short timescale provides a good target for intrinsic activity of individual Super-massive Black Holes(SMBH).
+We analysed archival \swift, \xmm, \chandra~and \nustar~data in 2005 $\sim$ 2018. All 2-10~keV fluxes are corrected for Galactic absorption with cflux model in Xspec v12.10.1f \citep{1996ASPC..101...17A}, where its absorption by Galactic neutral hydrogen, nH, was fixed at 0.0243 $\times 10^{22} cm^{-2}$\citep[see ][]{2016A&A...593L...9H}. The 2-10~keV flux variability reach a factor around 8-10 between 2009 and 2016, which could be caused by the dimming of the central engine. The severe variability in short timescale provides a good target for intrinsic activity of individual Super-massive Black Holes(SMBH). All best fit parameters are listed in Table.~\ref{tab:table1}.
 %\textit{XMM-Newton}
 
 \subsubsection{\swift/XRT}
@@ -363,13 +364,16 @@ E(B-V)=0.099-0.075,
 $A_V$  is the extinction in the V band
 extinction in magnitudes from \citet{2007ApJ...663..320F}
 
-\subsection{Radio/VLA}\label{subsec:vla}
+\subsection{Radio/VLA}
+%\label{subsec:vla}
 %\subsubsection{VLA}
-We search all the historical VLA observations on Mrk~1018 within the field of view. For data reduction of old VLA data(project AU0020, AB0476, AB0540 and AB0878), we manually flagg and calibrate the data, then cleaned the image following the instruction\footnote{\url{https://casaguides.nrao.edu/index.php/VLA_5_GHz_continuum_survey_of_Seyfert_galaxies}}. For all JVLA data(project 16A-444, 16B-084),  we analysised the data with CASA version 5.3.0\citep{2007ASPC..376..127M}. All calibration are performed using scripted EVLA\_pipeline1.4.2\footnote{\url{https://science.nrao.edu/facilities/vla/data-processing/pipeline/scripted-pipeline}}. Different bands are split into different MS files after pipeline calibration and RFI check. Then the source are imaged using TCLEAN method and flux are estimated via IMFIT task. The flux density uncertainties are calculated as $\sigma_{S}=\sqrt{(rms)^2+(0.05\times S)^2}$, where $5\%$ absolute flux error is taken into account. Radio spetrum index $\alpha$ is estimated following $S_v \propto v^{-\alpha}$. Survey results in FIRST\citep{1994ASPC...61..165B,1995ApJ...450..559B} and Stripe 82\citep{2011AJ....142....3H} from archival papers are also listed in Table.~\ref{tab:table2}.
+We search all the historical VLA observations on Mrk~1018 within the field of view. For data reduction of old VLA data(project AU0020, AB0476, AB0540 and AB0878), we manually flagg and calibrate the data, then cleaned the image following the instruction\footnote{\url{https://casaguides.nrao.edu/index.php/VLA_5_GHz_continuum_survey_of_Seyfert_galaxies}}. For all JVLA data(project 16A-444, 16B-084),  we analysised the data with CASA version 5.3.0\citep{2007ASPC..376..127M}. All calibration are performed using scripted EVLA\_pipeline1.4.2\footnote{\url{https://science.nrao.edu/facilities/vla/data-processing/pipeline/scripted-pipeline}}. Different bands are split into different MS files after pipeline calibration and RFI check. Then the source are imaged using TCLEAN method and flux are estimated via IMFIT task. The flux density uncertainties are calculated as $\sigma_{S}=\sqrt{(rms)^2+(0.05\times S)^2}$, where $5\%$ absolute flux error is taken into account. Radio spetrum index $\alpha$ is estimated following $S_v \propto v^{-\alpha}$. Survey results in FIRST\citep{1994ASPC...61..165B,1995ApJ...450..559B} and Stripe 82\citep{2011AJ....142....3H} from archival papers are also listed in Table.~\ref{tab:tableradio}.
 
-\section{Result}\label{sec:result}
+\section{Result}
+\label{sec:result}
 
-\subsection{$\Gamma-Flux$ in X-ray}\label{subsec:g-f}
+\subsection{\texorpdfstring{\Gammaxray} \-Flux in X-ray \label{subsec:g-f}}
+
 Based on all X-ray spectrum fit, we show the spectrum index evolution with flux and Eddington rate, as shown in Fig.~\ref{fig:xrayappendgood-fandg-tmap}. For XRT observations, we only present data with re-chi<1.5 here. For comparison, we also list all the fitting result from reference papers in Table.~\ref{tab:table1}. For better data visualization, interactive image plotted with Bokeh\footnote{\url{https://bokeh.pydata.org/en/latest/index.html}} can be found online\footnote{\url{https://brettlv.github.io/pythoncode/Mrk1018/Mrk1018-xray-bokeh.html}}.
 
 The $\Gamma$ vs Eddington rate diagram shows distinct evolution relationship when $L_{2-10 keV}/L_{Edd}$ reach the so-called critical Eddington rate around 0.005$\sim$ 0.01. The evolution of spectrum and the dimming of X-ray flux might be caused by the central engine activities as the intrinsic absorption(nH) is consistent with zero. However, we found that it transited in two tracks in short timescale(100-800 days) relative to the typical timescale of Super-massive Black Holes(SMBHs). We emphasise that Mrk1018 increased its flux in X-ray with a factor $\sim2$ from MJD 56352 to 56450, while $\Gamma$ dropped from $\sim1.8$ to $\sim1.4$.  
@@ -380,7 +384,7 @@ The $\Gamma$ vs Eddington rate diagram shows distinct evolution relationship whe
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
 	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.6\columnwidth]{./pic/subplots-xrayappendgood-fandg-second.png}
+	\includegraphics[width=0.9\textwidth]{./pic/subplots-xrayappendgood-fandg-second.png}
     \caption{$\Gamma$ and flux evolution}
     \label{fig:xrayappendgood-fandg-secondaxis}
 \end{figure}
@@ -390,13 +394,14 @@ The $\Gamma$ vs Eddington rate diagram shows distinct evolution relationship whe
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
 	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.7\columnwidth]{./pic/xrayappendgood-errorbar-f-g-tmap.png}
+	\includegraphics[width=0.9\textwidth]{./pic/xrayappendgood-errorbar-f-g-tmap.png}
     \caption{$\Gamma$ and flux evolution}
     \label{fig:xrayappendgood-fandg-tmap}
 \end{figure}
 
 
-\subsection{Correlation between X-ray and ultraviolet}\label{subsec:xray-uvot}
+\subsection{Correlation between X-ray and ultraviolet}
+%\label{subsec:xray-uvot}
 During the fading phase, the X-ray flux showed strong linear correlation with UVOT data. The spearmanr coefficiency between simultaneous flux of xrt and four uvot band(uvm2,u,uvw1,and uvw2) are 0.89, 0.79, 0.88, 0.87, respectively. The slope  between log($F_{2-10keV}$) and four band log($\lambda F_{\lambda}$) are 1.4, 0.9, 1.4, 1.6, respectively. Both in X-ray and optical band, it showed the brightening from MJD 56352 to 56450, we found an outlier in Fig.~\ref{fig:correlation-uvot-xray} since the flux during this period in x-ray and ultraviolet increased by a factor of $\sim 2$ and $\sim 0.4$, respectively. Then the flux faded by a factor of $\sim 3$ and $\sim 1.5$, respectively, from MJD 56450 to 56817.
 
 
@@ -406,7 +411,7 @@ During the fading phase, the X-ray flux showed strong linear correlation with UV
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
 	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.7\columnwidth]{./pic/uvot-xray-date-lc-sim-left.png}
+	\includegraphics[width=0.9\textwidth]{./pic/uvot-xray-date-lc-sim-left.png}
     \caption{Light curve from UVOT and XRT  between 2006 and 2016}
     \label{fig:uvot-xray-date-lc-all}
 \end{figure}
@@ -416,7 +421,7 @@ During the fading phase, the X-ray flux showed strong linear correlation with UV
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
 	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.6\columnwidth]{./pic/uvot_xrt_correlation-fig.png}
+	\includegraphics[width=0.9\textwidth]{./pic/uvot_xrt_correlation-fig.png}
     \caption{Correlation of light curve from UVOT and XRT  between 2006 and 2016}
     \label{fig:correlation-uvot-xray}
 \end{figure}
@@ -436,16 +441,18 @@ During the fading phase, the X-ray flux showed strong linear correlation with UV
 
 
 
-\subsection{$\alpha_{ox}-L $ diagram}\label{subsec:alpha_ox}
-We define $\alpha_{OX} $ as :
- $$\alpha_{OX}  = - \frac{log(\lambda F_{2600 \angstrom}/\nu F_{2keV})}{log(\nu_{ 2600 \angstrom }/\nu_{2keV})}+1$$ where we adopt the flux of uvw1 band with central wavelength {2600{\AA}}.
+\subsection{\texorpdfstring{\alphaox}\-L diagram \label{subsec:alpha_ox}}
+
+We define \alphaox as :
+ $$\alpha_{OX}  = - \frac{log(\lambda F_{2600 \angstrom}/\nu F_{2keV})}{log(\nu_{ 2600 \angstrom }/\nu_{2keV})}+1$$
+ where we adopt the flux of uvw1 band with central wavelength {2600{\AA}}.
 
 \begin{figure}
 \centering
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
 	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=\columnwidth]{./pic/Mrk1018_subplots_plus_2individuals_alpha_ox_L_x_Luv_rate.png}
+	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_subplots_plus_2individuals_alpha_ox_L_x_Luv_rate.png}
     \caption{Mrk1018 and changing-look AGNs $\alpha_{ox}-\nu L_{2keV}/L_{Edd}$ and $\alpha_{ox}-L_{uv}/L_{Edd}$}
     \label{fig:alpha_ox_luv}
 \end{figure}
@@ -458,7 +465,7 @@ We define $\alpha_{OX} $ as :
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
 	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.7\columnwidth]{./pic/Mrk1018_sed_uvot_xray-4band-multi.png}
+	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_sed_uvot_xray-4band-multi.png}
     \caption{SED between X-ray and ultraviolet}
     \label{fig:xray-uvot-sed}
 \end{figure}
@@ -474,7 +481,7 @@ We adopt data from intervals between X-ray and radio band as short as possible a
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
 	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.7\columnwidth]{./pic/radio-date-lc.png}
+	\includegraphics[width=0.9\textwidth]{./pic/radio-date-lc.png}
     \caption{Light curve of Mrk~1018 in radio band from VLA observations. The flux show weak variablitity in limited observations. }
     \label{fig:radio-lc}
 \end{figure}
@@ -485,7 +492,7 @@ We adopt data from intervals between X-ray and radio band as short as possible a
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
 	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.7\columnwidth]{./pic/Mrk1018_radio_xray_sel1_rate.png}
+	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_radio_xray_sel1_rate.png}
     \caption{Quasi-simultaneous $8.4GHzL_{8.4GHz}/L_{Edd}-L_{2-10keV}/L_{Edd}$ relation of Mrk1018}
     \label{fig:radio-xray-relation}
 \end{figure}
@@ -546,13 +553,27 @@ VLA}
 %% command and will number appendix equations (A1), (A2), etc. The
 %% Figure and Table counter will not reset.
 
-\appendix
-
-\section{Appendix tables}
+\clearpage
+%\bibliographystyle{mnras}
+\bibliography{refMrk1018}{}
+% if your bibtex file is called example.bib
+\bibliographystyle{aasjournal}
+\clearpage
 
 \input{table_xray.tex}
+\input{table_alpha_ox.tex}
 \input{table_radio.tex}
 \input{table_radio_xray.tex}
+
+
+%\appendix
+%\section{Appendix}
+
+
+%\clearpage
+
+
+%\clearpage
 
 
 %% For this sample we use BibTeX plus aasjournals.bst to generate the
@@ -564,9 +585,8 @@ VLA}
 %% pdflatex sample63.tex
 %% pdflatex sample63.tex
 
-%\bibliographystyle{mnras}
-\bibliography{refMrk1018} % if your bibtex file is called example.bib
-\bibliographystyle{aasjournal}
+
+
 
 %% This command is needed to show the entire author+affiliation list when
 %% the collaboration and author truncation commands are used.  It has to
@@ -576,7 +596,9 @@ VLA}
 %% Include this line if you are using the \added, \replaced, \deleted
 %% commands to see a summary list of all changes at the end of the article.
 %\listofchanges
-
+% Don't change these lines
+%\bsp	% typesetting comment
+%\label{lastpage}
 \end{document}
 
 % End of file `sample63.tex'.
