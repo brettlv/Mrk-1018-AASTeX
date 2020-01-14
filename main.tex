@@ -23,7 +23,7 @@
 %%
 %%
 %% using aastex version 6.3
-\documentclass{aastex63}
+\documentclass[twocolumn]{aastex63}
 
 %% The default is a single spaced, 10 point font, single spaced article.
 %% There are five other style options available via an optional argument. 
@@ -198,6 +198,7 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \graphicspath{{./}{figures/}}
+\graphicspath{{./}{pic/}}
 %% This is the end of the preamble.  Indicate the beginning of the
 %% manuscript itself with \begin{document}.
 
@@ -303,7 +304,7 @@ Wuhan, 430074, China \\}
 
 %% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
-We present multi-wavelength and long-term evolution of Changing-look AGN, Mrk~1018, especially during its fading phase, which shows rapid variability in X-ray and optical band. While Mrk~1018 shows strong correlation between UVOT and X-ray band, the flux in UVOT varies more than that in X-ray as a whole but reverses during type transition period within short timescale. The type transition timescale for Mrk~1018 is around 2 years or less, while we find the minimum timescale for variability can be as short as $\sim$ 100 days. The photon index($\Gamma$) indicating the hardness in X-ray and $\alpha_{OX}$ representing the relative strength of ultraviolet and X-ray, which are good probe of corona and accretion disk, both appear as "V-shape" when compared to luminosity, even though there is a wide gap. We find $\alpha_{OX}$ rather than $\Gamma$ is a better symbol of the type of AGN. However, only weak variability appears in the radio band, makes it hard to understand the mechanism of radio emission.  
+We present multi-wavelength and long-term evolution of Changing-look active galactic nuclei(CL-AGN), Mrk~1018. Before fading into the faint state, it shows rapid variability in X-ray and optical band. While Mrk~1018 shows strong correlation between UVOT and X-ray band, the flux in UVOT varies more than that in X-ray as a whole but reverses during type transition within short timescale. The type transition timescale for Mrk~1018 is around 2 years($\sim 2013-2015$) or less, while the minimum timescale for variability can be as short as $\sim$ 100 days during transition and several days in the faint state. The photon index($\Gamma$, hereafter) indicating the hardness in X-ray and $\alpha_{OX}$ representing the relative strength of ultraviolet to X-ray, both appear as ``V-shape'' when compared to luminosity. We find that $\alpha_{OX}-L_{uv}$ diagram is well linked to type of CL-AGN in comparison with other CL-AGNs. However, only weak variability appears in the radio band, makes it hard to understand the mechanism of radio emission.  
 \end{abstract}
 %% Keywords should appear after the \end{abstract} command. 
 %% See the online documentation for the full list of available subject
@@ -328,13 +329,9 @@ We present multi-wavelength and long-term evolution of Changing-look AGN, Mrk~10
 %% to the KEY in the \bibitem in the reference list below. 
 
 \section{Introduction}\label{sec:intro} 
-Unified active galactic nucleus(AGN) scheme can be described as a phenomenon that different AGN types are determined by the effect of different inclination to line of sight, see \citet{1993ARA&A..31..473A}. Under this scheme, Seyferts were first classified as Type I or II, depending on the emission lines shown by their spectra. Type I(S1) AGNs, show broad lines, allowed lines and narrower forbidden lines, could be face-on to observer, while type II(S2) AGNs show only both permitted and forbidden narrow lines, which could be edge-on and blocked by surrounding torus. Subclasses(e.g. Seyfert 1.5, 1.8 and 1.9) were introduced by \citet{1976MNRAS.176P..61O,1981ApJ...249..462O} based on the relative weaker ratio of broad-line components to the narrow-line component. For type 1.9, only $H\alpha$ line shows in the broad-line components. 
+Unified active galactic nucleus(AGN) scheme can be described as a phenomenon that different AGN types are determined by the effect of different inclination to line of sight \citep[see][]{1993ARA&A..31..473A}. Under this scheme, Seyferts were first classified as Type I or II, depending on the emission lines shown by their spectra. Type I (S1) AGNs, show broad lines, allowed lines and narrower forbidden lines, could be face-on to observer, while Type II (S2) AGNs show only both permitted and forbidden narrow lines, which could be edge-on and blocked by surrounding torus. Sub-classes(e.g. Seyfert 1.5, 1.8 and 1.9) were introduced by \citet{1976MNRAS.176P..61O,1981ApJ...249..462O} based on the relative weaker ratio of broad-line components to the narrow-line component. For type 1.9, only $H\alpha$ line appears in the broad-line components. 
 
-Mrk~1018 at z=0.042436 is known to be a changing-look AGN, which has undergone a full cycle with twice type transition. \citet{1986ApJ...311..135C} reported that the type of Mrk~1018 transited from S1.9 to S1 between 1979 and 1984. \citet{2016A&A...593L...8M} reported that Mrk~1018 returned to S1.9 between 2013 and 2015 after 30 years as a S1 \citep[see also][]{2017A&A...607L...9K}. A tidal eruption event could not account for the Mrk 1018's change. As reported in \citet{2016A&A...593L...9H}, the optical continuum brightness and X-ray flux drops by a factor of $\sim$ 17 and $\sim 8$, respectively, in 2010$\sim$2016 and an explanation of obscuration event is ruled out. Since no intrinsic absorption in the X-ray spectrum is detected, it comes  to the conclusion that change of type is consistent with declining accretion rate. \citet{2017A&A...607L...9K} reported the outburst of Mrk~1018 in October 2016 with the brightening by a factor of 1.9 at least to February 2017. Far-UV continuum flux also increased by a factor of 1.5 in around one year during the outburst. It seems that radiation of corona and accretion disk comes from near region. We notice that Mrk~1018 has also experienced the re-brightening during the types transition period simultaneously in X-ray and UVOT band by a factor of $\sim3$ and $\sim1.3$, respectively, between 2013 Mar and 2013 Jun. With broad-band spectrum fitting in two states, \citet{2018MNRAS.480.3898N} suggests the drop of soft X-ray excess contributing most ionizing photons causes the disappearance of Broad Line Region(BLR) then the type transition. \citet{2018ApJ...861...51K} models the broad-line component with a recoiled super-massive black hole scenario with a $\sim$29 years orbital period and predicts that if the type transition repeats as past, it would occur again in mid-2020s. Before that, what the mechanism for such short-timescale light curve variability for AGN and type transition is remains unclear. We use the photon index ($\Gamma$, hereafter) in X-ray and \alphaox ~ as probe to trace the relationship between corona and accretion disk during the type transition of Mrk~1018. Here we define \alphaox as :
-\begin{equation}
-\alpha_{OX}  = - \frac{log(\lambda F_{2500 \angstrom}/\nu F_{2keV})}{log(\nu_{ 2500 \angstrom }/\nu_{2keV})}+1
-\end{equation}
-The flux is converted by magnitude in the UVW1 filter with central wavelength {2600{$\angstrom$}} and full-width at half max of $\sim 683\angstrom$ \citep{2008MNRAS.383..627P} to estimate $\lambda F_{2500 \angstrom}$.  
+Mrk~1018 at z=0.042436 is known to be a changing-look AGN, which has undergone a full cycle with twice type transition. \citet{1986ApJ...311..135C} reported that the type of Mrk~1018 transited from S1.9 to S1 between 1979 and 1984. \citet{2016A&A...593L...8M} reported that Mrk~1018 returned to S1.9 between 2013 and 2015 after 30 years as a S1 \citep[see also][]{2017A&A...607L...9K}. A tidal eruption event could not account for the Mrk 1018's type change. As reported in \citet{2016A&A...593L...9H}, the optical continuum brightness and X-ray flux drops by a factor of $\sim$ 17 and $\sim 8$, respectively, in 2010$\sim$2016. An explanation of obscuration event for the variability is ruled out. Since no intrinsic absorption in the X-ray spectrum is detected, it comes to the conclusion that change of type is consistent with declining accretion rate. \citet{2017A&A...607L...9K} reported the mini-outburst of Mrk~1018 in October 2016 with the brightening by a factor of 1.9 at least to February 2017. Far-UV continuum flux also increased by a factor of 1.5 in around one year during the outburst. It seems that radiation of corona and accretion disk comes from near region. We notice that Mrk~1018 has also experienced the re-brightening during the types transition period simultaneously in X-ray and UVOT band by a factor of $\sim3$ and $\sim1.3$, respectively, between 2013 Mar and 2013 Jun. With broad-band spectrum fitting in two states, \citet{2018MNRAS.480.3898N} suggests the drop of soft X-ray excess contributing most ionizing photons causes the disappearance of Broad Line Region(BLR) then the type transition. \citet{2018ApJ...861...51K} models the broad-line component with a recoiled super-massive black hole scenario with a $\sim$29 years orbital period and predicts that if the type transition repeats as past, it would occur again in mid-2020s. Before that, what the mechanism for such short-timescale light curve variability for AGN and type transition is remains unclear. 
 
 This paper is structured as follows: In Sect. \ref{sec:data}, we describe the observations and data reduction. In Sect. ~\ref{sec:result}, we present multi-wavelength observation result. In last Sect. ~\ref{sec:discussion}, we discuss possible explanations for the observation of Mrk~1018. Hereafter, we adopt $H_0$=70 km $s^{-1} Mpc^{-1}$, $\Omega_{m}$=0.3, and $\Omega_{\Lambda}=0.7 $ as cosmological parameters, and the latest Black Hole(BH) mass measurement $\log(M_{BH}/M_{\odot})=7.84$ \citep{2017MNRAS.472.3492E,2018MNRAS.480.3898N}. 
 %\clearpage
@@ -342,91 +339,95 @@ This paper is structured as follows: In Sect. \ref{sec:data}, we describe the ob
 
 \section{Data Analysis}\label{sec:data}
 \subsection{X-ray}
-We analyse archival \swift, \xmm, \chandra~and \nustar~data in 2005 $\sim$ 2018. All 2-10~keV fluxes are corrected for Galactic absorption with cflux model in Xspec v12.10.1f \citep{1996ASPC..101...17A}, where its absorption by Galactic neutral hydrogen, nH, was fixed at 0.0243 $\times 10^{22} cm^{-2}$\citep[see ][]{2016A&A...593L...9H}. All best fit parameters include photon index($\Gamma$), flux in 2-10~keV($F_{2-10~keV}$) after the Galactic absorption correction, etc, and observation information are listed in Table.~\ref{tab:table1}.
+We adopt archival \swift, \xmm, \chandra~and \nustar~data in 2005 $\sim$ 2018. All 2-10~keV fluxes are corrected for Galactic absorption with cflux model in Xspec v12.10.1f \citep{1996ASPC..101...17A}, where its absorption by Galactic neutral hydrogen, nH, is fixed at 0.0243 $\times 10^{22} cm^{-2}$\citep[see ][]{2016A&A...593L...9H}. All best fit parameters include photon index($\Gamma$), flux in 2-10~keV($F_{2-10~keV}$) after the Galactic absorption correction, etc, and observation information are listed in Table.~\ref{tab:table1}.
 
 
 \subsubsection{\swift/XRT}
-The X-Ray Telescope (XRT) on board the Swift satellite has the most frequent long term X-ray observation of Mrk~1018. We analysis the archive data with xrtpipeline\footnote{\url{http://swift.asdc.asi.it}} and fit the spectrum of Mrk~1018 in 0.5-10~keV range based on a simple absorbed power-law model for all data.  The source region is a 47-arcsec-radius circle at the center of AGN as suggested in \citet{2009MNRAS.397.1177E}. When counts of photons is less than 100, we use C-stat method to fit the model without grouping counts bins. Otherwise, the spectrum is grouped by minimum of 20 counts per bin. 
+The X-Ray Telescope (XRT) on board the Swift satellite has the most frequent long term X-ray observation of Mrk~1018. We analyse the archive data with xrtpipeline\footnote{\url{http://swift.asdc.asi.it}} and fit the spectrum of Mrk~1018 in 0.5-10~keV range based on a simple absorbed power-law model for all data.  The source region is a 47-arcsec-radius circle at the center of AGN as suggested in \citet{2009MNRAS.397.1177E}. When counts of photons is less than 100, we use C-stat method to fit the model without grouping counts bins. Otherwise, the spectrum is grouped by minimum of 20 counts per bin. 
 
 
 \subsubsection{\chandra}
-We use ciao 4.10\footnote{\url{http://cxc.harvard.edu/ciao/threads/index.html}} to analysis the 6 Chandra observations released in archive data. All data is grouped by minimum of 20 counts per bin and fitted in 0.5-10~keV range by a absorbed power-law plus gaussian component, except for the observation in 2010, for which pile-up effects should be carefully taken into account. The source and background regions selection follow \citet{2017ApJ...840...11L}, which takes care of accounting for the effects of pile-up with a JDPILEUP component and get the  $\Gamma =1.97_{+0.04}^{-0.03}$. It's similar to our result $\Gamma =2.02\pm{0.03}$ when we consider the pile-up effects. The correction for pile-up effects will make the spectrum softer. \citet{2016A&A...593L...9H} excluded the brightest 9 pixels to avoid pile-up effects and get a lower $\Gamma =1.68\pm0.04$ determined from 4-8 keV range spectrum. \citet{2017A&A...607L...9K} ignored the pile-up effects and get a similar $\Gamma =1.7\pm0.03$ fitted in 0.5-8 keV. The fitting range selection will also influence the parameter $\Gamma$. So we adopted values from \citet{2017A&A...607L...9K} for the observation in 2010(MJD 55527).
+We use ciao 4.10\footnote{\url{http://cxc.harvard.edu/ciao/threads/index.html}} to analysis the 6 Chandra observations released in archive data. All data is grouped by minimum of 20 counts per bin and fitted in 0.5-10~keV range by a absorbed power-law plus gaussian component, except for the observation in 2010, for which pile-up effects should be carefully taken into account. The source and background regions selection follows \citet{2017ApJ...840...11L}, which takes care of accounting for the effects of pile-up with a JDPILEUP component and get the  $\Gamma =1.97_{+0.04}^{-0.03}$. It's similar to our result $\Gamma =2.02\pm{0.03}$ when we adopt the same pile-up model. \citet{2016A&A...593L...9H} excluded the brightest 9 pixels to avoid pile-up effects and get a lower $\Gamma =1.68\pm0.04$ determined from 4-8 keV range spectrum. The correction for pile-up effects will make the spectrum softer. \citet{2017A&A...607L...9K} ignored the pile-up effects and get a similar $\Gamma =1.7\pm0.03$ fitting in 0.5-8 keV. The fitting range selection will also influence the parameter $\Gamma$. So we adopt values from \citet{2017A&A...607L...9K} for the observation in 2010(MJD 55527).
 
 \subsubsection{\xmm/EPIC-PN}
-Only 2 observation data in 2005 and 2008 with XMM-Newton have been released, and we analysis the data with xmmsas-20170719-1539-16.1.0.\footnote{\url{https://www.cosmos.esa.int/web/xmm-newton}}. The spectrum is grouped by minimum of 30 counts per bin and fitted in the 2-10~keV range based on a absorbed power-law model. 
+Only 2 observation data in 2005 and 2008 with XMM-Newton has been released, and we analysis the data with xmmsas-20170719-1539-16.1.0.\footnote{\url{https://www.cosmos.esa.int/web/xmm-newton}}. The spectrum is grouped by minimum of 30 counts per bin and fitted in the 2-10~keV range based on a absorbed power-law model. 
 
 \subsubsection{\nustar}
-5 observations with Nustar in archive data are analysised with nupipeline version 0.4.6 within heasoft v6.26.\footnote{\url{https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/}}. The source region is a 50-arcsec-radius circle at the center of AGN, and background is extracted from region off source. The spectrum is grouped by minimum of 30 counts per bin and fitted in the 3-79~keV range based on a absorbed power-law model.
+5 observations with Nustar in archive data are analysed with nupipeline version 0.4.6 within heasoft v6.26.\footnote{\url{https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/}}. The source region is a 50-arcsec-radius circle at the center of AGN, and background is extracted from region off source. The spectrum is grouped by minimum of 30 counts per bin and fitted in the 3-79~keV range based on a absorbed power-law model.
 
 
 \subsection{Optical/ultraviolet}
 \subsubsection{\swift/UVOT}
-There are six filters in optical/ultraviolet band of \swift/UVOT: V,B,U,UVW1,UVM2 and UVW2. We use the tool \textit{uvotsource} to do the aperture photometry for all the observations of each filter. The source aperture radius is 5$\arcsec$ and the background is chosen in a blank region with much larger aperture radius. The results of the V and B filters are discarded, because the emission from the host galaxy is dominated in these two bands even in the bright phase \citep{2018MNRAS.480.3898N}. We discard the results of all filters after 2016, since the emission from the nucleus is comparable or less than the host galaxy \citep{2018MNRAS.480.3898N}, see Tab.~\ref{tab:tablealpha_ox} for details. Milky Way extinction correction with \texorpdfstring{E(B$-V$) = 0.024}. mag \footnote{Retrieved via the NASA/IPAC Extragalactic Database (NED): \url{http://ned.ipac.caltech.edu/}} with extinction model from \citet{2007ApJ...663..320F} is adopted.  
+There are six filters in optical/ultraviolet band of \swift/UVOT: V,B,U,UVW1,UVM2 and UVW2. We use the tool \textit{uvotsource} to do the aperture photometry for all the observations of each filter. The source aperture radius is 5$\arcsec$ and the background is chosen in a blank region with much larger aperture radius. The results of the V and B filters are discarded, because the emission from the host galaxy is dominated in these two bands even in the bright phase \citep{2018MNRAS.480.3898N}. We discard the results of all filters after 2016, since the emission from the nucleus is comparable or less than the host galaxy \citep{2018MNRAS.480.3898N}, see Table.~\ref{tab:tablealpha_ox} for details. Milky Way extinction correction with \texorpdfstring{E(B$-V$) = 0.024}. mag \footnote{Retrieved via the NASA/IPAC Extragalactic Database (NED): \url{http://ned.ipac.caltech.edu/}} with extinction model from \citet{2007ApJ...663..320F} is adopted.  
 %($A_V=$ 0.075 and $R_{V}=3.1$)
 
 
 \subsection{Radio/VLA}
 %\label{subsec:vla}
 %\subsubsection{VLA}
-We search all the historical VLA observations on Mrk~1018 within the field of view. For data reduction of old VLA data(project AU0020, AB0476, AB0540 and AB0878), we manually flag and calibrate the data, then clean the image following the instruction\footnote{\url{https://casaguides.nrao.edu/index.php/VLA_5_GHz_continuum_survey_of_Seyfert_galaxies}}. For all JVLA data(project 16A-444, 16B-084),  we analysis the data with CASA version 5.3.0\citep{2007ASPC..376..127M}. All calibration are performed using scripted EVLA\_pipeline1.4.2\footnote{\url{https://science.nrao.edu/facilities/vla/data-processing/pipeline/scripted-pipeline}}. Different bands are split into different MS files after pipeline calibration and RFI check. Then the source are imaged using TCLEAN method and flux are estimated via IMFIT task. The flux density uncertainties are calculated as $\sigma_{S}=\sqrt{(rms)^2+(0.05\times S)^2}$, where $5\%$ absolute flux error is taken into account. Radio spetrum index $\alpha$ is estimated following $S_v \propto v^{-\alpha}$. Survey results in FIRST\citep{1994ASPC...61..165B,1995ApJ...450..559B} and Stripe 82\citep{2011AJ....142....3H} from archival papers are also listed in Table.~\ref{tab:tableradio}.
+We search all the historical VLA observations on Mrk~1018 within the field of view. For data reduction of old VLA data(project AU0020, AB0476, AB0540 and AB0878), we manually flag and calibrate the data, then clean the image following the instruction\footnote{\url{https://casaguides.nrao.edu/index.php/VLA_5_GHz_continuum_survey_of_Seyfert_galaxies}}. For all JVLA data(project 16A-444, 16B-084),  we analyse the data with CASA version 5.3.0\citep{2007ASPC..376..127M}. All calibration are performed using scripted EVLA\_pipeline1.4.2\footnote{\url{https://science.nrao.edu/facilities/vla/data-processing/pipeline/scripted-pipeline}}. Different bands are split into different MS files after pipeline calibration and RFI check. Then the source is imaged using TCLEAN method and flux is estimated via IMFIT task. The flux density uncertainties are calculated as $\sigma_{S}=\sqrt{(rms)^2+(0.05\times S)^2}$, where $5\%$ absolute flux error is taken into account. Radio spetrum index $\alpha$ is estimated following $S_v \propto v^{-\alpha}$. Survey results in FIRST\citep{1994ASPC...61..165B,1995ApJ...450..559B} and Stripe 82\citep{2011AJ....142....3H} from archival papers are also listed in Table.~\ref{tab:tableradio}.
 
-\section{Result}
+\section{Results}
 \label{sec:result}
 
 \subsection{Multi-band light curve}
-The decay timescale fitted with a exponential function is $\sim$2000 and $\sim$1000 days for light curve in XRT and UVOT band. 
+Multi-band light curve of Mrk~1018 is shown in Fig.~\ref{fig:multi-lc-secondaxis}. During the main decay phase($\sim 2004-2016$), brightness in X-ray and UVOT band drops by a factor $\sim20$ and $\sim9$ in 12 years. During the transition phase($\sim 2013-2015$), we find that brightness in X-ray and UVOT band increases by a factor $\sim3.2$ and $\sim1.4$ in 100 days and then drops by a factor $\sim4.2$ and $\sim2.5$ in 400 days. X-ray flux shows strong correlation with UVOT data during the main decay phase. The spearmanr coefficiency between simultaneous flux of xrt and four uvot band(uvm2,u,uvw1,and uvw2) are 0.99, 0.9, 0.86, 0.94, respectively. We find an outlier in Fig.~\ref{fig:correlation-uvot-xray} since the flux during this period in x-ray and four uvot band(uvm2,u,uvw1,and uvw2) increases by a factor of $\sim 3.2$ and $\sim 1.2$, $\sim 1.2$, $\sim 1.4$, $\sim 1.5$, respectively, from MJD 56352 to 56450. Then the flux fades by a factor of $\sim 4.2$ and $\sim 3.3$, $\sim 1.8$, $\sim 2.5$, $\sim 3$, respectively, from MJD 56450 to 56817. The slopes between log($F_{2-10keV}$) and four band log($\lambda F_{\lambda}$) are 1.7, 1.1, 1.5, 1.8, respectively, after excluding the outlier. Mrk~1018 shows rapid variability in X-ray within days with a factor of $\sim3$ when it is in faint state (after 2016) (see Fig.~\ref{fig:x-ray-lc-rp-secondaxis}). Root Mean Square($\sigma^2_{rms} = 0.047 \pm 0.0045 $) of X-ray light curve in faint state is estimated according to \citet{1999ApJ...524..667T}. Flux in radio band decreases after the type transition, while the whole light curve shows only weak variability by a factor of less than 2.
 
-\begin{figure}
-\centering
-	% To include a figure from a file named example.*
-	% Allowable file formats are eps or ps if compiling using latex
-	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.8\textwidth]{./pic/subplots-xrt_uvot-radio-second.png}
-    \caption{Multi-wavelength light curve of Mrk~1018.}
-    \label{fig:multi-lc-secondaxis}
-\end{figure}
-
-
-\subsection{Evolution of photon index(~\texorpdfstring{$\Gamma$}.) and ~\texorpdfstring{$\alpha_{OX}$}.~ with Eddington rate \label{subsec:g-f}}
-
-Based on all X-ray spectrum fit, we show the photon index evolution with flux and Eddington rate, as shown in Fig.~\ref{fig:xrayappendgood-fandg-tmap}. For XRT observations, we only adopt data with 0.7$\le \chi^2_{reduced} \le$1.5. The $\Gamma$ vs Eddington rate diagram shows distinct evolution relationship when $L_{2-10~ keV}/L_{Edd}$ reach the so-called critical Eddington rate around 0.002$\sim$ 0.01. The evolution of spectrum and the dimming of X-ray flux might be caused by the central engine activities as the intrinsic absorption(nH) is consistent with zero. However, we find that it transits in two branches in short timescale(100-800 days) relative to the typical timescale of Super-massive Black Holes(SMBHs). We emphasise that Mrk~1018 increases its flux in X-ray by a factor $\sim3$ from MJD 56352 to 56450, while $\Gamma$ drops from $\sim1.8$ to $\sim1.4$, which appeares in two branches. However, the $\alpha_{OX}$ varies just a little and appears in left branch during the same re-brightening. The $\alpha_{OX}$-Eddington rate diagram is in good agreement with two other changing-look AGNs, see Fig.~\ref{fig:alpha_ox_luv}. 
-
-
-
-
-\subsection{Correlation between X-ray and ultraviolet}
-During the fading phase, the X-ray flux shows strong linear correlation with UVOT data. The spearmanr coefficiency between simultaneous flux of xrt and four uvot band(uvm2,u,uvw1,and uvw2) are 0.99, 0.9, 0.86, 0.94, respectively. Both in X-ray and UVOT band, it shows the brightening from MJD 56352 to 56450. We find an outlier in Fig.~\ref{fig:correlation-uvot-xray} since the flux during this period in x-ray and four uvot  band(uvm2,u,uvw1,and uvw2) increases by a factor of $\sim 3.2$ and $\sim 1.2$, $\sim 1.2$, $\sim 1.4$, $\sim 1.5$, respectively. Then the flux fades by a factor of $\sim 4.2$ and $\sim 3.3$, $\sim 1.8$, $\sim 2.5$, $\sim 3$, respectively, from MJD 56450 to 56817. The slopes between log($F_{2-10keV}$) and four band log($\lambda F_{\lambda}$) are 1.7, 1.1, 1.5, 1.8, respectively, after excluding the outlier.
-
-
-\begin{figure}
-\centering
-	% To include a figure from a file named example.*
-	% Allowable file formats are eps or ps if compiling using latex
-	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.9\textwidth]{./pic/uvot_xrt_correlation-fig-without-outlier.png}
-    \caption{Correlation of light curve from UVOT and XRT  between 2006 and 2016. Line represent the linear fit without the outlier in circle.}
-    \label{fig:correlation-uvot-xray}
-\end{figure}
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\subsection{\texorpdfstring{$\alpha_{OX}-L$}. diagram \label{subsec:alpha_ox}}
-
-
-
+\begin{comment}
+is calculated with  
+\begin{equation}
+\sigma^2_{rms}=\frac{1}{N\mu^2}\sum_{i=1}^{N}[(X_i-\mu)^2-\sigma_i^2]
+\end{equation}
+The error on $\sigma^2_{rms}$ is $s_D/(\mu^2\sqrt{N})$, where \begin{equation}
+s_D^2=\frac{1}{N-1}\sum_{i=1}^{N}\{[(X_i-\mu)^2-\sigma_i^2]-\sigma^2_{rms}\mu^2\}^2
+\end{equation}
+\end{comment}
 
 
 
 
 \subsection{SED between X-ray and ultraviolet}\label{subsec:xray-uvot-sed}
-As the flux drops in X-ray and UVOT band, the spectrum also changes, and the temperature of disk declines as well.
-\begin{figure}
+As the flux drops in X-ray and UVOT band, the spectrum also changes, and the temperature of disk declines as well, see Fig.~\ref{fig:xray-uvot-sed}.
+
+
+
+
+\begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.8\textwidth]{./pic/subplots-xrt_uvot-radio-second.png}
+    \caption{Multi-wavelength light curve of Mrk~1018. Instruments indicate by C-\chandra, S-\swift, X-\xmm, N-\nustar. Lines shows the fit of light curve with $F=S_0 e^{-(t-t_0)/\tau }$ in X-ray and UVOT band during the main decay phase in $\sim2004-2016$. Green shallow shows the inferred transition phase in $\sim2013-2015$.  While in faint state after 2016, there is still rapid variability in X-ray, see also Fig.~\ref{fig:x-ray-lc-rp-secondaxis} for details and optical radiation is dominated by host galaxy.}
+    \label{fig:multi-lc-secondaxis}
+\end{figure*}
+
+\begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.8\textwidth]{./pic/subplots-xrt_uvot-radio-second-right-part.png}
+    \caption{Light curve of Mrk~1018 in X-ray after MJD 58350. Mrk~1018 shows rapid variability with $\sigma^2_{rms} = 0.047 \pm 0.0045 $. Variability can reach a factor of $\sim3$ within 30 days.}
+    \label{fig:x-ray-lc-rp-secondaxis}
+\end{figure*}
+
+
+\begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.9\textwidth]{./pic/uvot_xrt_correlation-fig-without-outlier.png}
+    \caption{Correlation of light curve from UVOT and XRT  between 2006 and 2016. Colorful lines represent the linear fit without the outlier in circle.}
+    \label{fig:correlation-uvot-xray}
+\end{figure*}
+
+
+
+
+
+\begin{figure*}
 \centering
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
@@ -434,46 +435,9 @@ As the flux drops in X-ray and UVOT band, the spectrum also changes, and the tem
 	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_uvot_xray_sed.png}
     \caption{SED between X-ray and ultraviolet}
     \label{fig:xray-uvot-sed}
-\end{figure}
+\end{figure*}
 
-
-
-\subsection{Correlation between X-ray and radio}\label{subsec:xray-radio}
-We adopt data from intervals between X-ray and radio band as short as possible and find that correlation between the radio and X-ray flux is weak with a spearmanr coefficiency: -0.54, since the radio band flux of Mrk~1018 is almost flat relative to X-ray with a slope $\sim -0.1$ when fitting $log(L_{R})\propto log(L_{X-ray})$. 
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Discussion}\label{sec:discussion}
-
-
-
-
-%It's also consistent with a conclusion in \citet{2018MNRAS.480.3898N}.  
-
-
-\subsection{V-shape evolution}
-During the fading period, the evolution of X-ray photn index and $\alpha_{OX}$ with flux represents anti-positive/positive correlation in two tracks(so called 'V-shape'). The V-shape both in $\Gamma-L_{2-10~keV}/L_{Edd}$ and $\alpha_{OX}-\lambda L_{2500\angstrom}/L_{Edd}$ diagram show much similarity with other changing-look AGNs \citep[see ][]{2019arXiv190904676R} and quasars \citep[see ][]{2019ApJ...883...76R}. Unfortunately, there is a distinct flux gap between two tracks for Mrk~1018 which could be caused by lack of observation during the transition period or two intrinsic states in Mrk~1018. The anti-positive correlation of $\Gamma-L_X/L_{Edd}$ in low-accreting AGNs is found with $10^{-10}\leq L_X/L_{Edd} \leq 10^{-3}$ and $10^{-6.5}\leq L_XL_{Edd} \leq 10^{-3}$, \citep[see][]{2014MNRAS.443...72J,2015MNRAS.447.1692Y}, respectively, while positive correlation of $\Gamma-L_X/L_{Edd}$ is found when $L_X/L_{Edd} \geq 10^{-3}$ \citep[see][]{2015MNRAS.447.1692Y}. X-ray binaries and AGNs share similar anti-positive/positive correlation between X-ray photon index and Eddington ratio below/above a critical value of $L_{\rm bol}/L_{\rm Edd}\sim 10^{-2}$ \citep[e.g.,][and references therein]{2008ApJ...682..212W,2009MNRAS.399..349G,2015MNRAS.447.1692Y}. The analogous of $\alpha_{OX}-L_{bol}/L_{Edd}$ in X-ray binaries and simulated AGNs spectral states compared to changing-look quasars are also found \citep[see ][]{2011MNRAS.417..280S,2011MNRAS.413.2259S,2019ApJ...883...76R}, which provides another link between stellar-mass black holes and super-massive black holes.
-
-
-\subsection{Type transtion mechanism}
-\citet{2014MNRAS.438.3340E} describes a evolutionary sequence that the AGN type evolution sequence:type 1 $\to$ 1.2/1.5 $\to$ 1.8/1.9 $\to$ 2 as luminosity (or accretion rate onto black hole) decreases in a disc-wind scenario for broad line region. It's consistent with the type evolution of Mrk~1018. The 2-10~keV flux variability reaches a factor around 8-10 between 2009 and 2016, which could be caused by the dimming of the central engine. The type transition timescale can be limited in $\sim 2$ years, while we find the variability timescale in two X-ray tracks can be as short as several months. 
-
-While \citet{2008AJ....135.1505S} shows strong and positive $\Gamma-L_X$ correlation in 173 bright radio-quiet active galactic nuclei (AGNs) in the redshift range 0.1$\sim$4 when type I and no-type I AGNs are divided into sub-samples with luminosity range from $10^{42}$ to $10^{45} erg s^{-1}$, it seems that anti-positive/positive correlation between $\Gamma$ and X-ray luminosity or Eddington rate below/above the so-called critical accretion rate mainly relies on luminosity or accretion rate no matter what the type of AGNs are. As shown in Fig~\ref{fig:xrayappendgood-fandg-tmap} and ~\ref{fig:alpha_ox_luv}, we believe that $\alpha_{OX}-\lambda L_{2500\angstrom}/L_{Edd}$ relation is well linked to the types of AGNs, instead of $\Gamma-L_{X}$.    
- 
-%and references therein
-%e.g.,
- 
-
-\begin{figure}
+\begin{figure*}
 \centering
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
@@ -481,10 +445,10 @@ While \citet{2008AJ....135.1505S} shows strong and positive $\Gamma-L_X$ correla
 	\includegraphics[width=0.9\textwidth]{./pic/xrayappendgood-errorbar-f-g-tmap.png}
     \caption{$\Gamma$ and flux evolution of Mrk~1018. Blue arrows represent the rapid jump between left and right branches. Grey arrow represents the mini-outburst during 2016-2017.}
     \label{fig:xrayappendgood-fandg-tmap}
-\end{figure}
+\end{figure*}
 
 
-\begin{figure}
+\begin{figure*}
 \centering
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
@@ -492,25 +456,11 @@ While \citet{2008AJ....135.1505S} shows strong and positive $\Gamma-L_X$ correla
 	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_subplots_plus_2individuals_alpha_ox_L_x_Luv_rate.png}
     \caption{Mrk1018 and two other changing-look AGNs $\alpha_{OX}-\nu L_{2keV}/L_{Edd}$ and $\alpha_{OX}-\lambda L_{2500 \angstrom}/L_{Edd}$ diagram. Data of NGC~2617 and ZTF18aajupnt come from \citet{2019arXiv190904676R}.  }
     \label{fig:alpha_ox_luv}
-\end{figure}
-
-
-\subsection{Xray and ultraviolet }
-We find a strong correlation between the optical and X-ray fluxes during the fading phase, which might correspond to near radiation region  between X-ray corona and accretion disk, as also suggested in \citet{2017A&A...607L...9K}. Within the long-term timescales(e.g., 6 years), the optical flux varies more than X-ray, while it is inverse during two re-brightening phases and type transition period.
-
-%which may indicate that the optical emission is produced by re-processing of the X-rays in outer parts of the optically-thick wind coming from the accretion disk. 
-
-
-\subsection{Spectrum shape and accretion rate}
-From broad band SED from ultraviolet to X-ray, we can roughly estimate that the temperature of disk declines as the luminosity decreases.
+\end{figure*}
 
 
 
-\subsection{Radio and X-ray}
-%Mrk~1018 is located nearly at the transition between two accretion mode, with relatively flat slope in radio and X-ray Eddington rate $\nu L_{\nu}/L_{Edd}-L_{2-10keV}/L_{Edd}$ diagram.
-Mrk~1018 shows relatively flat radio-X-ray relation in the fundamental plane defined in \citet{2012MNRAS.419..267P}.
-
-\begin{figure}
+\begin{figure*}
 \centering
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
@@ -518,16 +468,138 @@ Mrk~1018 shows relatively flat radio-X-ray relation in the fundamental plane def
 	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_radio_xray_Plotkin2012.png}
     \caption{Mrk~1018's radio flux is flat relative to X-ray. Grey line shows the fundamental plane defined in \citet{2012MNRAS.419..267P} with intrinsic $\sigma=0.07$.}
     \label{fig:radio-xray-mass_relation_Plotkin2012}
-\end{figure}
+\end{figure*}
 
 
-The severe variability of Mrk~1018 in short timescale provides a good target for intrinsic activity of individual Super-massive Black Holes(SMBH). Considering all observational evidence, we can draw a full picture about how Mrk~1018's spectrum evolves with luminosity. As the luminosity declines, both corona and accretion disk varies.  
+
+
+
+\subsection{Evolution of ~\texorpdfstring{$\Gamma$}. and ~\texorpdfstring{$\alpha_{OX}$}.~ with Eddington rate \label{subsec:g-f}}
+We use the $\Gamma$ in X-ray and \alphaox ~ as probe to trace the relationship between corona and accretion disk during the type transition of Mrk~1018. Here we define \alphaox as :
+\begin{equation}
+\alpha_{OX}  = - \frac{\log(\lambda F_{2600 \angstrom}/\nu F_{2keV})}{\log(\nu_{ 2600 \angstrom }/\nu_{2keV})}+1
+\end{equation}
+The flux is converted by magnitude in the UVW1 filter with central wavelength {2600{$\angstrom$}} and full-width at half max of $\sim 683\angstrom$ \citep{2008MNRAS.383..627P} to estimate $\lambda F_{2500 \angstrom}$ used in other references. Only data before 2014 is used for estimation of $\alpha_{OX}$. Based on all X-ray spectrum fit, we present the photon index evolution with flux and Eddington rate, as shown in Fig.~\ref{fig:xrayappendgood-fandg-tmap}. For XRT observations, we only adopt data with 0.75$\le \chi^2_{reduced} \le$1.5. The $\Gamma$ vs Eddington rate diagram shows distinct anti-positive/positive correlation when $L_{2-10~ keV}/L_{Edd}$ below/above the so-called critical Eddington rate around 0.002$\sim$ 0.01. However, we find that it transits in two branches in short timescale(100-800 days). We emphasise that Mrk~1018 increases its flux in X-ray by a factor $\sim3$ from MJD 56352 to 56450, while $\Gamma$ drops from $\sim1.8$ to $\sim1.4$, which appeares in two branches. However, the $\alpha_{OX}$ varies just a little and appears in left branch during the same time. The $\alpha_{OX}$-Eddington rate diagram is in good agreement with two other changing-look AGNs, see Fig.~\ref{fig:alpha_ox_luv}. 
+
+
+
+
+
+\subsection{Correlation between X-ray and radio}\label{subsec:xray-radio}
+We adopt data from intervals between X-ray and radio band as short as possible to explore the quasi-simultaneous flux in two bands. The correlation between the radio and X-ray flux is weak with a spearmanr coefficiency: -0.54, since the radio band flux of Mrk~1018 is flat relative to X-ray with a slope $\sim -0.1$ when fitting $log(L_{R})\propto log(L_{X-ray})$, see also Fig.~\ref{fig:radio-xray-mass_relation_Plotkin2012}. 
+
+
+
+
+\subsection{Summary of results}
+\begin{enumerate}
+\item The flux in UVOT and X-ray shows rapid variability and strong correlation except an outlier, but in radio band varies by a factor less than 2, in $\sim$15 years. 
+
+\item Variability timescale is as short as $\sim$ 100 days with a factor of 4 during transition state and several days with a factor of 3 in faint state.
+
+\item As the luminosity declines, the spectrum of disk and corona also varies.
+
+\item $\Gamma-L$ and $\alpha_{OX}-L$ both appear as ``V-shape''. 
+
+
+\end{enumerate}
+
+
+
+
+
+
+\section{Discussion}\label{sec:discussion}
+\subsection{Spectral Evolution and Changing-look}
+
+The evolution of X-ray photon index and $\alpha_{OX}$ with flux represents anti-positive/positive correlation in two branches (so called ``V-shape''). The V-shape both in $\Gamma-L_{2-10~keV}/L_{Edd}$ and $\alpha_{OX}-\lambda L_{2500\angstrom}/L_{Edd}$ diagram show much similarity with other changing-look AGNs \citep[see ][]{2019arXiv190904676R} and quasars \citep[see][]{2019ApJ...883...76R}. Unfortunately, there is a distinct flux gap between two branches for Mrk~1018 which could be caused by lack of observation during the transition period or two intrinsic separate states in Mrk~1018 and the type confirmation from optical spectrum is absent during the type transition phase (in 2013$\sim$2015). The feature in $\Gamma-L_{2-10~keV}/L_{Edd}$ diagram is also found in a large samples of normal AGNs. For example, \citet{2008ApJ...682...81S} finds significant and positive correlation between the hard X-ray photon index ($\Gamma$) and accretion rate ($L/L_{Edd}$) for moderate to high luminosity Radio-Quiet AGNs. The anti-positive correlation of $\Gamma-L_X/L_{Edd}$ in low-accreting AGNs is found with $10^{-10}\leq L_X/L_{Edd} \leq 10^{-3}$ and $10^{-6.5}\leq L_X/L_{Edd} \leq 10^{-3}$, \citep[see][]{2014MNRAS.443...72J,2015MNRAS.447.1692Y}, respectively, while positive correlation of $\Gamma-L_X/L_{Edd}$ is found when $L_X/L_{Edd} \geq 10^{-3}$ \citep[see][]{2015MNRAS.447.1692Y}. X-ray binaries and AGNs share similar anti-positive/positive correlation between X-ray photon index and Eddington ratio below/above a critical value of $L_{\rm bol}/L_{\rm Edd}\sim 10^{-2}$ \citep[e.g.,][and references therein]{2007ApJ...658..282Y,2008ApJ...682..212W,2009MNRAS.399..349G,2011A&A...530A.149Y,2015MNRAS.447.1692Y,2019arXiv191203971L,2019arXiv191212145Y}.
+
+The analogous of $\alpha_{OX}-L_{bol}/L_{Edd}$ in X-ray binaries and simulated AGNs spectral states compared to changing-look quasars is also found \citep[see ][]{2011MNRAS.417..280S,2011MNRAS.413.2259S,2019ApJ...883...76R}, which provides another link between stellar-mass black holes and super-massive black holes. As shown in Fig~\ref{fig:xrayappendgood-fandg-tmap} and ~\ref{fig:alpha_ox_luv}, we find that $\alpha_{OX}-\lambda L_{2500\angstrom}/L_{Edd}$ relation is well linked to the types of AGNs when compared with another two Changing-look AGNs.   
+
+What causes the two different branches in $\Gamma-L_{2-10~keV}/L_{Edd}$ diagram is unknown yet. A possible explanation with accretion mode transition has been suggested in Changing-look AGNs \citep[e.g.,][]{2019arXiv191200164A, 2019arXiv191203972L}, the low luminosity AGN (LLAGN) with large amplitude X-ray variability \citep[e.g.,][]{2019arXiv191201897L}, and BL Lac objects\citep[e.g.,][]{2003ApJ...599..147C} with analogous to X-ray binaries\citep[e.g.,][]{2005A&A...442L..15P,2018MNRAS.476.1581A}. If the accretion mode transition corresponds to the type transition, what mechanism makes it occur in such a short timescale is needed. 
+
+Whether the branches in $\Gamma-L_{2-10~keV}/L_{Edd}$ diagram correspond to the types of CL-AGNs is not for sure. But for normal AGNs, there is a random distribution in $\Gamma-L_X$ diagram for type I AGNs when luminosity range is large($\sim 1.78\times 10^{41}-1.53\times 10^{47} erg s^{-1} ; 4.5\times 10^{41}-9\times 10^{44} erg s^{-1}$) \citep[see][respectively]{1997MNRAS.286..513R,2015AASP....5...79S}, while \citet{2008AJ....135.1505S} shows strong and positive $\Gamma-L_X$ correlation in bright radio-quiet active galactic nuclei (AGNs) when type I and no-type I AGNs are divided into sub-samples with luminosity range from $10^{42}$ to $10^{45} erg s^{-1}$. It seems that anti-positive/positive correlation between $\Gamma$ and X-ray luminosity or Eddington rate below/above the so-called critical accretion rate mainly relies on luminosity and radio properties no matter what the type of AGNs are. 
+
+\citet{2008ApJ...682...81S} finds that $\alpha_{OX}$ relies on optical-UV luminosity, in radio-quiet (RQ) active galactic nuclei (AGNs), rather than $L_{Bol}/L_{Edd}$, consistent with \citet{2012MNRAS.423..600S} in Type 1 AGNs where optical-UV luminosity mainly drives the X-ray to UV emission ratio, rather than $M_{BH}$ or $L_{Bol}/L_{Edd}$. So it might be $L_{X}$ and $L_{UV}$ that drives $\Gamma$ and $\alpha_{OX}$ in two branches, respectively.
+
+
+
+
+
+
+\subsection{Type transition mechanism}
+The 2-10~keV flux variability reaches a factor around 8-10 between 2009 and 2016, which is consistent with the dimming of the central engine with zero intrinsic absorption. \citet{2014MNRAS.438.3340E} describes a evolutionary sequence that the AGN type evolution sequence:type 1 $\to$ 1.2/1.5 $\to$ 1.8/1.9 $\to$ 2 as luminosity (or accretion rate onto black hole) decreases in a disc-wind scenario for broad line region. It's consistent with the type evolution of Mrk~1018, despite of lack of optical confirmation in middle type. \citet{2018MNRAS.480.3898N} suggests the drop of soft X-ray excess contributing most ionizing photons causes the disappearance of Broad Line Region(BLR), thus the type transition.
+
+
+
+
+The correlation between the optical and X-ray fluxes during the decay phase, which might correspond to near radiation region  between X-ray corona and accretion disk, as also suggested in \citet{2017A&A...607L...9K}.
+
+The type transition timescale can be limited in $\sim 2$ years, while we find the variability timescale in two X-ray branches can be as short as several months. 
+
+%which may indicate that the optical emission is produced by re-processing of the X-rays in outer parts of the optically-thick wind coming from the accretion disk. 
+%\subsection{Spectrum shape and accretion rate}
+From broad band SED from ultraviolet to X-ray, we can roughly estimate that the temperature of disk declines as the luminosity decreases.
+%\subsection{Radio and X-ray}
+%Mrk~1018 is located nearly at the transition between two accretion mode, with relatively flat slope in radio and X-ray Eddington rate $\nu L_{\nu}/L_{Edd}-L_{2-10keV}/L_{Edd}$ diagram.
+Mrk~1018 shows relatively flat radio-X-ray relation in the fundamental plane defined in \citet{2012MNRAS.419..267P}.
+
+\subsection{Characteristic timescale}
+The luminosity of Mrk 1018 starts to decline after a 30-years plateau phase \citep[see][]{2016A&A...593L...8M}. In order to roughly estimate the characteristic decay timescale, we then use an exponential function ($F=S_0\,e^{-(t-t_0)/\tau }$) to fit the X-ray's (MJD 53385-58317) and UVOT's (MJD 53587-56818) light curves. The characteristic decay timescale $\tau$ is obtained as $\sim$2000 and $\sim$1000 days for light curve in XRT and UVOT band. 
+
+For disk instability model, characteristic timescale  
+
+DIM, thermal-viscous disk instabilities timescale in X-ray binaries and AGNs
+\citep[e.g.,][for details and reviews)]{2001NewAR..45..449L,2009A&A...496..413H,2019arXiv191001852H}
+$t_{dim} $
+
+
+%{2015ApJ...805...87Y,2015ApJ...811...23Y}
+
+Several typical characteristic timescale with viscosity parameter $alpha=0.1$ suggested in \citet{2018MNRAS.480.3898N}:
+
+$t_{dyn}\sim (\frac{GM_{BH}}{R^3})^{-\frac{1}{2}} \sim $4 days
+
+$t_{thermal}\sim \frac{t_{dyn}}{\alpha}\sim $ 1 month
+
+$t_{visous}\sim \frac{t_{dyn}}{\alpha}\,(\frac{H}{R})^{-2}\sim $ $4 \times 10^5$years
+
+
+
+%characteristic timescale
+
+
+
+
+
+Radiation pressure instability plus inner optically thin Advection-Dominated Accretion Flow \citep[see][]{2019arXiv190406767S} provides a possible explanation of outbursts of Changing-look AGN. 
+
+$t_{decay}=\frac{\Sigma \Delta R 2\pi R}{\dot{M}}$
+
+
+
+
+magnetically elevated accretion \citep[see][]{2019MNRAS.483L..17D} ?
+
+$t_{inflow}$
+
+%and references therein
+%e.g.,
+
+
+
+
+
+
+The severe variability of Mrk~1018 in short timescale provides a good target for intrinsic activity of individual Super-massive Black Holes(SMBH). Considering all observational evidence, we can draw a full picture about how Mrk~1018's spectrum evolves with luminosity. As the luminosity declines, both corona and accretion disk varies. Furthermore, we need to explore more CLAGNs and compare them to XRBs and normal AGNs in order to verify the mechanism of rapid variability.  
 
 
 
 \acknowledgments
 
-We thank Linhui Wu for disscussion on the VLA data reduction. This work is supported by...
+
+
+%% We thank Linhui Wu for disscussion on the VLA data reduction. This work is supported by...
 
 %% To help institutions obtain information on the effectiveness of their 
 %% telescopes the AAS Journals has created a group of keywords for telescope 
@@ -569,7 +641,7 @@ VLA}
 \bibliography{refMrk1018}{}
 % if your bibtex file is called example.bib
 \bibliographystyle{aasjournal}
-\clearpage
+%\clearpage
 
 \input{table_xray.tex}
 \input{table_alpha_ox.tex}
