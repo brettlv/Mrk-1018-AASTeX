@@ -409,6 +409,17 @@ We search all the historical VLA observations on Mrk~1018 within the field of vi
     \label{fig:multi-lc-secondaxis}
 \end{figure*}
 
+\begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.8\textwidth]{./pic/subplots-xrt_uvot-radio-second-right-part.png}
+    \caption{Light curve of Mrk~1018 in X-ray based on the \swift data after MJD 58350. Mrk~1018 shows rapid variability with $\sigma^2_{rms} = 0.047 \pm 0.0045 $. Variability can reach a factor of $\sim3$ within 30 days.}
+    \label{fig:x-ray-lc-rp-secondaxis}
+\end{figure*}
+
+
 Multi-band light curve of Mrk~1018 is shown in \autoref{fig:multi-lc-secondaxis}. During the main decay phase($\sim 2004-2016$), brightness in X-ray and UVOT band drops by a factor $\sim20$ and $\sim9$ in 12 years. During the transition phase($\sim 2013-2015$), we find that brightness in X-ray and UVOT band increases by a factor $\sim3.2$ and $\sim1.4$ in 100 days and then drops by a factor $\sim4.2$ and $\sim2.5$ in 400 days. X-ray flux shows strong correlation with UVOT data during the main decay phase. The spearmanr coefficiency between simultaneous flux of xrt and four uvot band(uvm2,u,uvw1,and uvw2) are 0.99, 0.9, 0.86, 0.94, respectively. We find an outlier in \autoref{fig:correlation-uvot-xray} since the flux during this period in x-ray and four uvot band(uvm2,u,uvw1,and uvw2) increases by a factor of $\sim 3.2$ and $\sim 1.2$, $\sim 1.2$, $\sim 1.4$, $\sim 1.5$, respectively, from MJD 56352 to 56450. Then the flux fades by a factor of $\sim 4.2$ and $\sim 3.3$, $\sim 1.8$, $\sim 2.5$, $\sim 3$, respectively, from MJD 56450 to 56817. The slopes between log($F_{2-10keV}$) and four band log($\lambda F_{\lambda}$) are 1.7, 1.1, 1.5, 1.8, respectively, after excluding the outlier. Mrk~1018 shows rapid variability in X-ray within days with a factor of $\sim3$ when it is in faint state (after 2016) (see \autoref{fig:x-ray-lc-rp-secondaxis}). Root Mean Square($\sigma^2_{rms} = 0.047 \pm 0.026 $) of X-ray light curve in faint state is estimated according to \citet{1999ApJ...524..667T}. Flux in radio band decreases by 20 percent from MJD 57481 to MJD 57719 after the type transition, while the whole light curve shows only weak variability by a factor of less than 2.
 
 \begin{comment}
@@ -434,73 +445,7 @@ As the flux drops in X-ray and UVOT band, the spectrum also changes, and the tem
 %Instruments indicate by C-\chandra, S-\swift, X-\xmm, N-\nustar.
 
 
-\begin{figure*}
-\centering
-	% To include a figure from a file named example.*
-	% Allowable file formats are eps or ps if compiling using latex
-	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.8\textwidth]{./pic/subplots-xrt_uvot-radio-second-right-part.png}
-    \caption{Light curve of Mrk~1018 in X-ray based on the \swift data after MJD 58350. Mrk~1018 shows rapid variability with $\sigma^2_{rms} = 0.047 \pm 0.0045 $. Variability can reach a factor of $\sim3$ within 30 days.}
-    \label{fig:x-ray-lc-rp-secondaxis}
-\end{figure*}
 
-
-\begin{figure*}
-\centering
-	% To include a figure from a file named example.*
-	% Allowable file formats are eps or ps if compiling using latex
-	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.9\textwidth]{./pic/uvot_xrt_correlation-fig-without-outlier.png}
-    \caption{Correlation of light curve from UVOT and XRT  between 2006 and 2016. Colorful lines represent the linear fit without the outlier in circle.}
-    \label{fig:correlation-uvot-xray}
-\end{figure*}
-
-
-
-
-
-\begin{figure*}
-\centering
-	% To include a figure from a file named example.*
-	% Allowable file formats are eps or ps if compiling using latex
-	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_uvot_xray_sed.png}
-    \caption{SED between X-ray and ultraviolet}
-    \label{fig:xray-uvot-sed}
-\end{figure*}
-
-\begin{figure*}
-\centering
-	% To include a figure from a file named example.*
-	% Allowable file formats are eps or ps if compiling using latex
-	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.9\textwidth]{./pic/xrayappendgood-errorbar-f-g-tmap.png}
-    \caption{$\Gamma$ and flux evolution of Mrk~1018. Blue arrows represent the rapid jump between left and right branches. Grey arrow represents the mini-outburst during 2016-2017.}
-    \label{fig:xrayappendgood-fandg-tmap}
-\end{figure*}
-
-
-\begin{figure*}
-\centering
-	% To include a figure from a file named example.*
-	% Allowable file formats are eps or ps if compiling using latex
-	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_subplots_plus_2individuals_alpha_ox_L_x_Luv_rate.png}
-    \caption{Mrk1018 and two other changing-look AGNs $\alpha_{OX}-\nu L_{2keV}/L_{Edd}$ and $\alpha_{OX}-\lambda L_{2500 \angstrom}/L_{Edd}$ diagram. Data of NGC~2617 and ZTF18aajupnt come from \citet{2019arXiv190904676R}.  }
-    \label{fig:alpha_ox_luv}
-\end{figure*}
-
-
-
-\begin{figure*}
-\centering
-	% To include a figure from a file named example.*
-	% Allowable file formats are eps or ps if compiling using latex
-	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_radio_xray_Plotkin2012.png}
-    \caption{Mrk~1018's radio flux is flat relative to X-ray. Grey line shows the fundamental plane defined in \citet{2012MNRAS.419..267P} with intrinsic $\sigma=0.07$.}
-    \label{fig:radio-xray-mass_relation_Plotkin2012}
-\end{figure*}
 
 
 
@@ -612,6 +557,64 @@ Summary:
 The severe variability of Mrk~1018 in short timescale provides a good target for intrinsic activity of individual Super-massive Black Holes(SMBH). Considering all observational evidence, we can draw a full picture about how Mrk~1018's spectrum evolves with luminosity. As the luminosity declines, both corona and accretion disk varies. The decay timescale  . Furthermore, we need to explore more CL-AGNs and compare them to XRBs and normal AGNs in order to verify the mechanism of rapid variability.  
 
 
+
+
+\begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.9\textwidth]{./pic/uvot_xrt_correlation-fig-without-outlier.png}
+    \caption{Correlation of light curve from UVOT and XRT  between 2006 and 2016. Colorful lines represent the linear fit without the outlier in circle.}
+    \label{fig:correlation-uvot-xray}
+\end{figure*}
+
+
+
+
+
+\begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_uvot_xray_sed.png}
+    \caption{SED between X-ray and ultraviolet}
+    \label{fig:xray-uvot-sed}
+\end{figure*}
+
+\begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.9\textwidth]{./pic/xrayappendgood-errorbar-f-g-tmap.png}
+    \caption{$\Gamma$ and flux evolution of Mrk~1018. Blue arrows represent the rapid jump between left and right branches. Grey arrow represents the mini-outburst during 2016-2017.}
+    \label{fig:xrayappendgood-fandg-tmap}
+\end{figure*}
+
+
+\begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_subplots_plus_2individuals_alpha_ox_L_x_Luv_rate.png}
+    \caption{Mrk1018 and two other changing-look AGNs $\alpha_{OX}-\nu L_{2keV}/L_{Edd}$ and $\alpha_{OX}-\lambda L_{2500 \angstrom}/L_{Edd}$ diagram. Data of NGC~2617 and ZTF18aajupnt come from \citet{2019arXiv190904676R}.  }
+    \label{fig:alpha_ox_luv}
+\end{figure*}
+
+
+
+\begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_radio_xray_Plotkin2012.png}
+    \caption{Mrk~1018's radio flux is flat relative to X-ray. Grey line shows the fundamental plane defined in \citet{2012MNRAS.419..267P} with intrinsic $\sigma=0.07$.}
+    \label{fig:radio-xray-mass_relation_Plotkin2012}
+\end{figure*}
 
 \acknowledgments
 
