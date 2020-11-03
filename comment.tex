@@ -116,21 +116,34 @@ F_\mathrm{\nu_1}=\frac{F_{\nu_1-\nu_2}}{\nu_1 \times \mathrm{ln} \frac{\nu_2}{\n
 \end{comment}
 
 
+    54926 & 2.29  $\pm$ 0.30  & 55015 & 10.00 $\pm$ 0.50  & -89   & 4.83E+38 & 4.21E+43 \\
+    56550 & 2.63  $\pm$ 0.37  & 56450 & 7.90  $\pm$ 0.82  & 100   & 5.53E+38 & 3.33E+43 \\
+    57481 & 2.56  $\pm$ 0.01  & 57443 & 1.27  $\pm$ 0.03  & 38    & 5.39E+38 & 5.35E+42 \\
+    57768 & 2.07  $\pm$ 0.02  & 57801 & 2.44  $\pm$ 0.02  & -33   & 4.36E+38 & 1.03E+43 \\
+    58087 & 1.97  $\pm$ 0.14  & 58123 & 2.10  $\pm$ 0.10  & -36   & 4.16E+38 & 8.85E+42 \\
+    58472 & 2.83  $\pm$ 0.39  & 58445 & 0.70  $\pm$ 0.25  & 27    & 5.95E+38 & 2.96E+42 \\
+
+
+\begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.8\textwidth]{./pic/Mrk1018_sed.png}
+    \caption{SED between X-ray and ultraviolet. Red, green and blue markers correspond to type 1 phase, changing look phase and type 2 phase, respectively. }
+    \label{fig:xray-uvot-sed}
+\end{figure*}
+
+%On the other hand, if the positive and negative correlation of $\Gamma$--$L_\mathrm{X}$ diagram found in AGNs and XRBs both associates with different type/state, Mrk~1018 in $\Gamma$--$L_\mathrm{X}$ diagram jumps from left branch to right branch within 98 days and return back to left branch within 367 days during a flare. 
 
 
 
-sh: copy: 未找到命令
-sh: copy: 未找到命令
-terminate called after throwing an instance of 'std::runtime_error'
-  what():  Could not open model skymodel.txt
-terminate called after throwing an instance of 'std::runtime_error'
-  what():  Antenna counts do not match: 0 in solution file, 128 in MS.
+The dynamic timescale is given as 
+\begin{equation}
+\tau_{dy} \sim (\frac{G M_\mathrm{BH}}{r^3})^{-1/2} \sim 5.7\times 10^{-3} (\frac{M_\mathrm{BH}}{10^8M_{\odot}})(\frac{r_d}{r_g})^{3/2} \, days
+\end{equation} 
 
-2020-09-04 08:53:44	SEVERE	MeasTable::dUTC(Double) (file /share/home/qguo/devel/casacore-2.4.1/measures/Measures/MeasTable.cc, line 4396)	Leap second table TAI_UTC seems out-of-date. 
-2020-09-04 08:53:44	SEVERE	MeasTable::dUTC(Double) (file /share/home/qguo/devel/casacore-2.4.1/measures/Measures/MeasTable.cc, line 4396)+	Until the table is updated (see the CASA documentation or your system admin),
-2020-09-04 08:53:44	SEVERE	MeasTable::dUTC(Double) (file /share/home/qguo/devel/casacore-2.4.1/measures/Measures/MeasTable.cc, line 4396)+	times and coordinates derived from UTC could be wrong by 1s or more.
-
-what():  Could not find Python file mwapy/data/mwa_full_embedded_element_pattern.h5
+If we consider a disk radius of $r_d =100\, r_g$, and viscosity coefficient $\alpha=0.1$ , we can get a thermal timescale of $\sim$39 days, which is comparable to the flare timescale we find during the Changing-look phase.
 
 
 %The discussion about whether the type transition on such short timescale is related to activeness of central engine or obscuration event is still continuing. 
