@@ -257,3 +257,88 @@ If we consider a disk radius of $r_d =100\, r_g$, and viscosity coefficient $\al
 %The severe variability of Mrk~1018 in short timescale provides a good target for intrinsic activity of individual Super-massive Black Holes(SMBH). Considering all observational evidence, we can draw a full picture about how Mrk~1018's spectrum evolves with luminosity. As the luminosity declines, both corona and accretion disk varies. The decay timescale indicates that the variability of X-ray is relative to the thermal and dynamical process.  Furthermore, we need to explore more CL-AGNs and compare them to XRBs and normal AGNs in order to verify the mechanism of rapid variability.  
 
 \footnote{Since the fluxes of the six filters of UVOT are all dominated by the host galaxy after $\sim$ MJD 57429.}
+
+
+
+We present the evolution of Eddington ratio $\log(L_\mathrm{bol}/L_\mathrm{Edd})$, corona radius $R_\mathrm{cor}$, and derived disk temperature $T_\mathrm{disk}$ from standard thin disk model in \autoref{fig:disk_evoliton}. The variation of $R_\mathrm{cor}$ is uncertain due to the large errorbars during this period. Here, the truncated disk temperature ($T_\mathrm{disk}$) at given radius (R) is estimated as :
+\begin{equation}
+\begin{aligned}
+    T_\mathrm{disk} & = \{\frac{3GM\dot{M}}{8\pi R^3 \sigma}[1-(\frac{2 R_g}{R})^{1/2}]\}^{1/4} \\ & = \{\frac{3 L_\mathrm{bol} (\frac{R}{R_g})^{-3}}{8\pi \sigma \eta R_g^2}[1-(\frac{2 R_g}{R})^{1/2}]\}^{1/4}
+\end{aligned}
+\end{equation}, where $\eta=0.1$ is the radiation efficiency, $R_g=\frac{GM}{c^2}$ is the gravity radius.
+
+
+         \multirow{2}*{46032} & \multirow{2}*{AU0020} & L    & 1.49  & 4.21  $\pm$ 0.23  & \multirow{2}*{0.52 $\pm0.07$} &\\
+                &     &  C & 4.86  & 2.29  $\pm$ 0.14  & & \\
+    47261     & AB0476 & C     & 4.86  & 1.91  $\pm$ 0.23  &  &\\
+    47692     & AB0540A & C     & 4.86  & 2.62  $\pm$ 0.16  &  &\\
+    47732     & AB0540B & C     & 4.86  & 2.31  $\pm$ 0.17  & & \\
+    49820.5 $\pm$ 773.5 & AB0628 & L     & 1.4   & 4.20  $\pm$ 0.45  &  & \citet{1998AJ....115.1693C} \\
+    49820.5 $\pm$ 773.5 & AB0628 & L     & 1.4   & 4.15  $\pm$ 0.25  &  & \citet{1997ApJ...475..479W} \\
+    49341  & AB0308 & L     & 1.4   & 4.20  $\pm$ 0.54  &  & \citet{2002AJ....124..675C}\\
+    50970     & AB0878 & X     & 8.46  & 2.47  $\pm$ 0.17  & 0.3 $\pm0.08$\\
+    52246.5 $\pm$ 278.5 & AB0950 & L     & 1.4   & 4.15  $\pm$ 0.25  & & \citet{2003yCat.8071....0B} \\
+    54872.5 $\pm$ 51.5  & AR685 & L     & 1.4   & 3.69  $\pm$ 0.19  &  & \citet{2011AJ....142....3H}\\
+    54878   & AB1314 & L     & 1.4   & 3.36  $\pm$ 0.20  &  & \citet{2012yCat.8090....0B} \\
+    56550 $\pm$ 8     & 13B-272 & L     & 1.4   & 3.85  $\pm$ 0.31  &  & \citet{2016MNRAS.460.4433H} \\
+
+    \multirow{3}*{57481}     &  \multirow{3}*{16A-444} & C     & 5     & 2.56  $\pm$ 0.13  & \multirow{3}*{0.02$\pm0.05$}& \\
+              &     & X     & 10    & 2.16  $\pm$ 0.11  & &\\
+              &    &  K     & 22    & 2.46  $\pm$ 0.12  &  &\\
+    57719     & 16B-084 & X     & 10    & 1.78  $\pm$ 0.09  &   &\\
+
+    57731     & 16B-084 & X     & 10    & 1.97  $\pm$ 0.10  &  &\\
+
+    57768     & 16B-084 & C     & 5     & 2.07  $\pm$ 0.10  & 0 &\\
+    58087     & VLASS1.1 & L     & 3     & 2.30  $\pm$ 0.36  & & \\
+    
+    58472     & 18B-245 & K     & 20    & 2.71  $\pm$ 0.14  &  & \\
+    
+    
+    
+    
+    
+    \begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_disk_time_evolution.png}
+    \caption{The evolution of $\log(L_\mathrm{bol}/L_\mathrm{Edd})$, $\Gamma$, $R_\mathrm{cor}$, and $T_\mathrm{disk}$ based on the model of \texttt{phabs*redden*(optxagnf+hostpol)}. Grey points represent results of joint fitting in \citep{2018MNRAS.480.3898N}. Black data points represent our fitting results with simultaneous \xrt\, and \uvot\, observation. Since \citep{2018MNRAS.480.3898N} combined two observations of 2013 and 2016 respectively, and fit all the four observations jointly, they got intermediate estimations of $L_\mathrm{bol}$ and $R_\mathrm{cor}$ for observations in 2013 and 2016. Red and blue vertical dotted lines represent the last time of optical spectroscopic confirmation at type 1 and type 1.9, respectively.}
+    \label{fig:disk_evoliton}
+\end{figure*}
+
+
+
+
+%The latter is considered to be accreting in a radiatively inefficient mode of low/hard state since Mrk~590 well follows the fundamental plane defined in a sample of low/hard state galactic black holes plus LINERs \citep[see discussion in ][]{2016MNRAS.460..304K}.
+
+ %\citet{2018MNRAS.480.3898N} have fitted the broad band SEDs of Mrk 1018 at high, median and low luminosity and considered the spectral state transition scenario as the luminosity decreasing. Actually the ``V-shape" correlation also exists in the BHXRBs \citep[e.g.][]{2015PKAS...30..565Y} , and is well explained by the similar mechanism to AGNs \citep[e.g.][]{2011A&A...530A.149Y,2015MNRAS.447.1692Y}. 
+ 
+%The Galactic extinction correction with \texorpdfstring{E(B$-V$) = 0.024}. mag \footnote{Retrieved via the NASA/IPAC Extragalactic Database (NED): \url{http://ned.ipac.caltech.edu/}} with extinction model from \citet{2007ApJ...663..320F} is adopted.  
+ 
+ 
+ 
+%The emission from the nucleus at the four UV filters are comparable to the host galaxy after 2016 \citep[see][]{2018MNRAS.480.3898N}, so the host galaxy roughly contribute half of the UV emission at the type 2 AGN phase.
+%Colors represent different states the same as \autoref{fig:multi-lc-secondaxis}.
+%The flux in UV and X-ray bands roughly dropped by a factor $\sim17.5$ and $\sim7.5$, and the bolometric luminosity we estimate dropped by a factor of $\sim24$ during 2005--2016. The flux in UV and X-ray bands roughly drops by a factor $\sim17.5$ and $\sim7.5$ during 2005--2016. However, the bolometric luminosity we estimate drops by a factor of $\sim24$.
+
+%$\Gamma$ could be more efficiently regulated by the change of luminosity in individual source.
+
+
+\begin{figure*}
+\centering
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=0.9\textwidth]{./pic/Mrk1018_subplots_plus_alpha_ox_logLbol_rate.png}
+    \caption{\alphaox\, vs. $L_\mathrm{bol}/L_\mathrm{Edd}$ correlation for Mrk~1018 in comparison with other samples or best-fitting result such as low-luminosity Active Galactic Nuclei in \citet[][]{2011ApJ...739...64X}, type 1 AGN in \citet{2010A&A...512A..34L}, soft X-Ray selected Active Galactic Nuclei in \citet[][]{2010ApJS..187...64G} and Changing-look quasars in \citet[][]{2019ApJ...883...76R}. }
+    \label{fig:alphaox-bol}
+\end{figure*}
+
+%$\Gamma$-$L_\mathrm{X}/L_\mathrm{Edd}$ and \alphaox-$\log{L_\mathrm{UV}}$ correlations show evident difference, especially for the re-flare when we compare Mrk~1018 with different CL-AGN samples.
+
+%We present the multi-wavelength observation and long-term variability study of the changing-look AGN Mrk~1018. 
+%, which are consistent with previous literature. \\
+
+%What mechanisms drive such long and short-term flux variations are still uncertain. 
